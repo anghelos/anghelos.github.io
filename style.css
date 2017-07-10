@@ -13,19 +13,26 @@ img{
 }
 .img2{
     mix-blend-mode: multiply;
-    animation-name: rotate;
+    animation-name: rotate, hue;
     animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: reverse;
 }
 .img1{
-    animation-name: rotate;
+    animation-name: rotate, hue;
     animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+.container:active img{
+    animation-play-state: paused;
+}
 @keyframes rotate{
-    from {transform: rotate(0deg); filter: hue-rotate(0deg)}
-    to {transform: rotate(360deg); filter: hue-rotate(360deg)}
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+@keyframes hue{
+    from {filter: hue-rotate(0deg)}
+    to {filter: hue-rotate(360deg)}
 }
