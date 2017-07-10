@@ -10,20 +10,17 @@
 img{
     max-width:100%;
     position: absolute;
+    animation-name: rotate, hue;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 .img2{
     mix-blend-mode: multiply;
-    animation-name: rotate, hue;
     animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     animation-direction: reverse;
 }
 .img1{
-    animation-name: rotate, hue;
     animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
 .container:active img{
     animation-play-state: paused;
