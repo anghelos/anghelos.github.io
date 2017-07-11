@@ -1,0 +1,36 @@
+.container{
+    position: absolute;
+    margin: auto;
+    top:0;left:0;right:0;bottom:0;
+    width: 1000px;
+    height: 1000px;
+    max-width: 80vmin;
+    max-height: 80vmin;
+}
+img{
+    max-width:100%;
+    position: absolute;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.planet{
+    animation-duration: 40s;
+    /*animation-direction: reverse;*/
+}
+.inner{
+    animation-duration: 50s;
+}
+.outer{
+    animation-duration: 60s;
+}
+.container:hover .planet{
+    animation-play-state: paused;
+}
+@keyframes rotate{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+body{
+    background-color: #fdfdfd;
+}
