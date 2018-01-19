@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-  <html>
-   <link rel="stylesheet" href="style.css">
-    <body>
-        <div class="container">
-            <img src="1.png" class="img1" alt="">
-            <img src="2.png" class="img2" alt="">
-        </div>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moodboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ondrop="drop(event)" ondragover="allowDrop(event)">
+    <header>
+        <span id="title">Moodboard</span>
+        <div id="add">+</div>
+        <form id="form" class="hidden" action="#" onsubmit="addButton(event)">
+            <input id="img_url" type="text" placeholder="Insert image url">
+        </form>
+    </header>
+    <div id="bin"></div>
+    <footer>Time wasted by Anghelos Coulon</footer>
+    <!--  Javascript  -->
+    <script src="js/interact.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

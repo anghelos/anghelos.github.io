@@ -1,0 +1,35 @@
+.container{
+    position: absolute;
+    margin: auto;
+    top:0;left:0;right:0;bottom:0;
+    width: 500px;
+    height: 500px;
+    max-width: 80vmin;
+    max-height: 80vmin;
+}
+img{
+    max-width:100%;
+    position: absolute;
+    animation-name: rotate, hue;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.img2{
+    mix-blend-mode: multiply;
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+.img1{
+    animation-duration: 15s;
+}
+.container:active img{
+    animation-play-state: paused;
+}
+@keyframes rotate{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+@keyframes hue{
+    from {filter: hue-rotate(0deg)}
+    to {filter: hue-rotate(360deg)}
+}
