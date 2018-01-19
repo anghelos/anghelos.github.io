@@ -1,5 +1,6 @@
 var localdata = [];
 var loading = false;
+var start = true;
 
 //Check to see if there are existing images
 if (window.localStorage.moodboard) {
@@ -161,6 +162,12 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
         localdata.splice(div.id, 1);
         document.body.removeChild(div);
         updateData();
+        
+        //add info text if no more images.
+        if(localdata.length == 0){
+            start = true;
+            document.getElementById('start_info').classList.remove('hidden');
+        }
     });
     up.addEventListener('click', function () {
         div.style.zIndex++;
@@ -191,6 +198,11 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
             id: id
         });
         updateData();
+    }
+    
+    if(start){
+        start = false;
+        document.getElementById('start_info').classList.add('hidden');
     }
 }
 

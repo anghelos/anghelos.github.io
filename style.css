@@ -29,6 +29,18 @@ img {
     transition: filter .4s ease-out;
 }
 
+img:after {
+    content: "Looks like a bad link!";
+    background-color: #969696;
+    color: white;
+    padding: 55px 40px 25px;
+    display: block;
+    width: 80px;
+    height: 70px;
+    z-index: 10;
+    font-weight: bold;
+}
+
 
 .controls {
     position: absolute;
@@ -53,17 +65,19 @@ img {
     font-size: 2.7em;
     margin-top: -0.18em;
 }
-.up{
+
+.up {
     right: calc(5% + 40px);
     font-size: 1.35em;
 
 }
-.down{
+
+.down {
     right: calc(5% + 80px);
     font-size: 1.35em;
 }
 
-.bw{
+.bw {
     right: calc(5% + 120px);
 }
 
@@ -115,7 +129,7 @@ header {
     display: none;
 }
 
-#img_url{
+#img_url {
     background-color: #dbdbdb;
     border: none;
     border-bottom: 2px solid #969696;
@@ -123,18 +137,40 @@ header {
     width: 30em;
     padding-left: 1em;
 }
-#img_url::placeholder{
-    color:#969696;
-    
+
+#img_url::placeholder {
+    color: #969696;
+
 }
+
 *:focus {
     outline: none;
 }
 
-footer{
+footer {
     position: absolute;
     bottom: 2em;
     right: 3%;
     color: #bcbcbc;
     font-size: .8em;
+}
+
+#start_info {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    pointer-events: none;
+}
+
+#start_info.hidden {
+    display: none;
+}
+
+.info {
+    text-align: center;
+    margin: auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #969696;
 }
