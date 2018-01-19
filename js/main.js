@@ -162,9 +162,9 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
         localdata.splice(div.id, 1);
         document.body.removeChild(div);
         updateData();
-        
+
         //add info text if no more images.
-        if(localdata.length == 0){
+        if (localdata.length == 0) {
             start = true;
             document.getElementById('start_info').classList.remove('hidden');
         }
@@ -199,8 +199,8 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
         });
         updateData();
     }
-    
-    if(start){
+
+    if (start) {
         start = false;
         document.getElementById('start_info').classList.add('hidden');
     }
@@ -211,15 +211,51 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
+//Drop local images
+function dropLocal(evt, x, y) {
+    var files = evt.dataTransfer.files; // FileList object
+    alert(files);
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+        // Only process image files.
+        if (!f.type.match('image.*')) {
+            continue;
+        }
+
+        var reader = new FileReader();
+
+        // Closure to capture the file information.
+        reader.onload = (function (theFile) {
+            return function (e) {
+                // Render thumbnail.
+                addImage(e.target.result, x, y);
+                x += 20;
+                y += 20;
+                alert(e.target.result);
+            };
+        })(f);
+
+        // Read in the image file as a data URL.
+        reader.readAsDataURL(f);
+    }
+}
+
 function drop(ev) {
     ev.stopPropagation();
     ev.preventDefault();
+
+    var x = ev.clientX - 50;
+    var y = ev.clientY - 50;
+
+    if (ev.dataTransfer.types == 'Files') {
+        dropLocal(ev, x, y);
+        return;
+    }
     var imageUrl = ev.dataTransfer.getData('text/html');
     var rex = /src="?([^"\s]+)"?\s*/;
     var url, res;
     url = rex.exec(imageUrl);
-    var x = ev.clientX - 50;
-    var y = ev.clientY - 50;
 
     addImage(url[1], x, y);
 
