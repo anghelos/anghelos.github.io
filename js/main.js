@@ -214,7 +214,6 @@ function allowDrop(ev) {
 //Drop local images
 function dropLocal(evt, x, y) {
     var files = evt.dataTransfer.files; // FileList object
-    alert(files);
     // Loop through the FileList and render image files as thumbnails.
     for (var i = 0, f; f = files[i]; i++) {
 
@@ -232,7 +231,6 @@ function dropLocal(evt, x, y) {
                 addImage(e.target.result, x, y);
                 x += 20;
                 y += 20;
-                alert(e.target.result);
             };
         })(f);
 
@@ -247,7 +245,7 @@ function drop(ev) {
 
     var x = ev.clientX - 50;
     var y = ev.clientY - 50;
-
+    alert(ev.dataTransfer.types);
     if (ev.dataTransfer.types == 'Files') {
         dropLocal(ev, x, y);
         return;
