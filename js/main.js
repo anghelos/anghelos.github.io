@@ -1,6 +1,7 @@
 var localdata = [];
 var loading = false;
 var start = true;
+var alerted_storage = false;
 
 //Check to see if there are existing images
 if (window.localStorage.moodboard) {
@@ -13,7 +14,16 @@ if (window.localStorage.moodboard) {
 }
 
 function updateData() {
-    window.localStorage.moodboard = JSON.stringify(localdata);
+    try {
+        window.localStorage.moodboard = JSON.stringify(localdata);
+    } catch (e) {
+        if (e.code == 22 || e.code == 1014) {
+            if (!alerted_storage) {
+                alert("The storage is full (max 5MB). Try using image urls instead of local files. You can still use the app, but your changes will no longer be saved :(");
+                alerted_storage = true;
+            }
+        }
+    }
 }
 
 function updateThis(el) {
@@ -29,16 +39,16 @@ interact('.draggable')
         // enable inertial throwing
         inertia: true,
         // keep the element within the area of it's parent
-        restrict: {
-            restriction: "parent",
-            endOnly: false,
-            elementRect: {
-                top: 0,
-                left: 0,
-                bottom: 1,
-                right: 1
-            }
-        },
+        //        restrict: {
+        //            restriction: "parent",
+        //            endOnly: true,
+        //            elementRect: {
+        //                top: 0,
+        //                left: 0,
+        //                bottom: 1,
+        //                right: 1
+        //            }
+        //        },
         // enable autoScroll
         autoScroll: false,
 
@@ -85,6 +95,7 @@ interact('.draggable')
         // update the element's style
         target.style.width = event.rect.width + 'px';
         target.style.height = event.rect.height + 'px';
+        target.style.maxWidth = null;
 
         // translate when resizing from top or left edges
         x += event.deltaRect.left;
@@ -190,6 +201,8 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
     });
 
     if (!loading) {
+        div.style.maxWidth = '60%';
+
         localdata.push({
             url: src,
             x: x,
@@ -248,10 +261,10 @@ function drop(ev) {
     for (var i = 0; i < ev.dataTransfer.types.length; i++) {
         if (ev.dataTransfer.types[i] == 'text/html') {
             var imageUrl = ev.dataTransfer.getData('text/html');
-            
+
             //fix pinterest image size
             imageUrl = imageUrl.replace(/pinimg.com\/236x/, "pinimg.com/564x")
-            
+
             var rex = / src="?([^"\s]+)"?\s*/;
             var url, res;
             url = rex.exec(imageUrl);
