@@ -190,7 +190,8 @@ header {
 }
 
 #img_url::placeholder {
-    color: white;
+    color: #dbdbdb;
+    opacity: 1;
 
 }
 
