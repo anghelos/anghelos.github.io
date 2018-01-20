@@ -129,7 +129,7 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
     bw.innerHTML = '☯'
 
     img.src = src;
-    div.classList.add('draggable');
+    div.classList.add('draggable', 'just_added');
     div.id = id;
     if (style) {
         div.style = style;
@@ -245,18 +245,25 @@ function drop(ev) {
 
     var x = ev.clientX - 50;
     var y = ev.clientY - 50;
-    for (var i=0; i < ev.dataTransfer.types.length; i++){
-    if (ev.dataTransfer.types[i] == 'Files') {
-        dropLocal(ev, x, y);
-        return;
+    for (var i = 0; i < ev.dataTransfer.types.length; i++) {
+        if (ev.dataTransfer.types[i] == 'text/html') {
+            var imageUrl = ev.dataTransfer.getData('text/html');
+            
+            //fix pinterest image size
+            imageUrl = imageUrl.replace(/pinimg.com\/236x/, "pinimg.com/564x")
+            
+            var rex = / src="?([^"\s]+)"?\s*/;
+            var url, res;
+            url = rex.exec(imageUrl);
+            addImage(url[1], x, y);
+            return;
+        } else if (ev.dataTransfer.types[i] == 'Files') {
+            dropLocal(ev, x, y);
+            return;
+        }
     }
-    }
-    var imageUrl = ev.dataTransfer.getData('text/html');
-    var rex = /src="?([^"\s]+)"?\s*/;
-    var url, res;
-    url = rex.exec(imageUrl);
+    alert('Sorry, unrecognized image type!');
 
-    addImage(url[1], x, y);
 
 }
 
@@ -265,7 +272,9 @@ function addButton(e) {
     e.preventDefault();
     var url = document.getElementById("img_url").value;
     document.getElementById("img_url").value = '';
-    addImage(url);
+    if (url != '' && url.length > 5) {
+        addImage(url);
+    }
     toggleForm();
     document.getElementById("img_url").blur();
 }

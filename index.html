@@ -8,10 +8,11 @@
 
 <body ondrop="drop(event)" ondragover="allowDrop(event)">
     <header>
-        <span id="title">Moodboard</span>
-        <div id="add">+</div>
-        <form id="form" class="hidden" action="#" onsubmit="addButton(event)">
+        <h2 id="title">Moodboard <span id="help">?</span></h2>
+        <div id="add" class="plus_button">+</div>
+        <form id="form" name="imageForm" class="hidden" action="#" onsubmit="addButton(event)">
             <input id="img_url" type="text" placeholder="Insert image url">
+            <div id="submit" class="plus_button" onclick="addButton(event)">+</div>
         </form>
     </header>
     <div id="start_info">
