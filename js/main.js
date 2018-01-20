@@ -245,10 +245,11 @@ function drop(ev) {
 
     var x = ev.clientX - 50;
     var y = ev.clientY - 50;
-    alert(ev.dataTransfer.types);
-    if (ev.dataTransfer.types == 'Files') {
+    for (var i=0; i < ev.dataTransfer.types.length; i++){
+    if (ev.dataTransfer.types[i] == 'Files') {
         dropLocal(ev, x, y);
         return;
+    }
     }
     var imageUrl = ev.dataTransfer.getData('text/html');
     var rex = /src="?([^"\s]+)"?\s*/;
