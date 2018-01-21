@@ -204,8 +204,11 @@ footer {
     position: absolute;
     bottom: 2em;
     right: 3%;
-    color: #bcbcbc;
+    color: #b2b2b2;
     font-size: .8em;
+}
+#version{
+    color: #969696;
 }
 
 #start_info {
