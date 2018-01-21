@@ -189,6 +189,7 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
             var divs = document.getElementsByClassName('draggable');
             for (var i = 0; i < divs.length; i++) {
                 divs[i].style.zIndex++;
+                updateThis(divs[i]);
             }
         }
         div.style.zIndex--;
