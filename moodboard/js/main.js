@@ -134,10 +134,10 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
     var down = document.createElement('span');
     var bw = document.createElement('span');
 
-    close.innerHTML = '+';
+    close.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
     up.innerHTML = '<i class="fa fa-chevron-up" aria-hidden="true"></i>';
     down.innerHTML = '<i class="fa fa-chevron-down" aria-hidden="true"></i>';
-    bw.innerHTML = '☯'
+    bw.innerHTML = '<i class="fa fa-adjust" aria-hidden="true"></i>'
 
     img.src = src;
     div.classList.add('draggable', 'just_added');

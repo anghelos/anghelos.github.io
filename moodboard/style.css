@@ -11,7 +11,7 @@ body {
     background-color: #dbdbdb;
     width: 100vw;
     height: 100vh;
-    font-family: sans-serif;
+    font-family: Montserrat, sans-serif;
     overflow: hidden;
 }
 
@@ -39,7 +39,7 @@ img:after {
     width: 80px;
     height: 70px;
     z-index: 10;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 
@@ -47,13 +47,13 @@ img:after {
     position: absolute;
     top: 5%;
     opacity: 0;
-    font-weight: bold;
+    font-weight: 600;
     display: block;
     cursor: pointer;
     transition: all .2s ease-out;
     color: white;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-    font-size: 1.35em;
+    font-size: 1.7em;
 }
 
 .controls:hover {
@@ -71,11 +71,11 @@ img:after {
     color: #969696;
     background-color: white;
     border-radius: 3px;
-    top: 140%;
+    top: 130%;
     left: 50%;
     display: block;
-    font-size: .7em;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: 400;
     opacity: .8;
     transition: opacity .2s .7s ease-out;
     text-shadow: none;
@@ -83,14 +83,18 @@ img:after {
 
 .close {
     right: 5%;
-    transform: rotate(45deg);
-    font-size: 2.7em;
-    margin-top: -0.18em;
+    /*transform: rotate(45deg);*/
+    /*font-size: 2.7em;*/
+    /*margin-top: -0.18em;*/
+}
+
+.close:hover:after {
+	content: 'Delete';
+	padding: 5px;
 }
 
 .up {
     right: calc(5% + 40px);
-    font-size: 1.35em;
 }
 
 .up:hover:after {
@@ -99,8 +103,7 @@ img:after {
 }
 
 .down {
-    right: calc(5% + 80px);
-    font-size: 1.35em;
+    right: calc(5% + 82px);
 }
 
 .down:hover:after {
@@ -109,7 +112,9 @@ img:after {
 }
 
 .bw {
-    right: calc(5% + 120px);
+    right: calc(5% + 127px);
+    font-size: 1.5em;
+    margin-top: .1em;
 }
 
 .bw:hover:after {
@@ -129,7 +134,7 @@ header {
 }
 
 #title {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.2em;
     color: #969696;
     display: block;
@@ -180,7 +185,7 @@ header {
 
 .plus_button {
     color: #969696;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 2.5em;
     position: absolute;
     right: 0.5em;
@@ -228,7 +233,11 @@ header {
     /*    border-bottom: 2px solid #969696;*/
     color: white;
     width: 30em;
+    height: 1.5em;
     padding: .3em 1em;
+    font-size: .9em;
+    margin-top: .15em;
+    font-family: Montserrat, sans-serif;
 }
 
 #img_url::placeholder {
@@ -269,6 +278,6 @@ footer {
     text-align: center;
     margin: auto;
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 600;
     color: #969696;
 }
