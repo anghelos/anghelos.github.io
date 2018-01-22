@@ -135,8 +135,8 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
     var bw = document.createElement('span');
 
     close.innerHTML = '+';
-    up.innerHTML = '🡹';
-    down.innerHTML = '🡻';
+    up.innerHTML = '<i class="fa fa-chevron-up" aria-hidden="true"></i>';
+    down.innerHTML = '<i class="fa fa-chevron-down" aria-hidden="true"></i>';
     bw.innerHTML = '☯'
 
     img.src = src;
