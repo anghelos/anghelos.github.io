@@ -60,6 +60,27 @@ img:after {
     color: #ffda76;
 }
 
+.controls:after {
+    transition: opacity .2s ease-out;
+    opacity: 0;
+    content: '';
+}
+
+.controls:hover:after {
+    position: absolute;
+    color: #969696;
+    background-color: white;
+    border-radius: 3px;
+    top: 140%;
+    left: 50%;
+    display: block;
+    font-size: .7em;
+    font-weight: normal;
+    opacity: .8;
+    transition: opacity .2s .7s ease-out;
+    text-shadow: none;
+}
+
 .close {
     right: 5%;
     transform: rotate(45deg);
@@ -70,7 +91,11 @@ img:after {
 .up {
     right: calc(5% + 40px);
     font-size: 1.35em;
+}
 
+.up:hover:after {
+    content: 'Bring forward';
+    padding: 5px;
 }
 
 .down {
@@ -78,8 +103,18 @@ img:after {
     font-size: 1.35em;
 }
 
+.down:hover:after {
+    content: 'Send backward';
+    padding: 5px;
+}
+
 .bw {
     right: calc(5% + 120px);
+}
+
+.bw:hover:after {
+    content: 'Desaturate';
+    padding: 5px;
 }
 
 .grayscale img {
@@ -101,7 +136,7 @@ header {
     margin-left: 1em;
 }
 
-#help{
+#help {
     margin-left: 1em;
     border-radius: 50%;
     display: inline-block;
@@ -116,24 +151,27 @@ header {
     position: relative;
     transition: all .2s ease-out;
 }
-#help:after{
+
+#help:after {
     transition: all .2s ease-out;
     content: '';
     position: absolute;
     background-color: #bfbfbf;
 }
-#help:hover{
+
+#help:hover {
     background-color: #969696;
     color: white;
     border-radius: 50% 0 0 50%;
 }
-#help:hover:after{
+
+#help:hover:after {
     content: 'Drag image to move, \A drag from sides to resize. \A \A Bring forward or backward with 🡹 and 🡻. \A \A Desaturate image with ☯. \A \A The moodboard is saved in your browser!';
     position: absolute;
     white-space: pre-wrap;
     background-color: #969696;
     width: 13em;
-    padding:  1.2em 1.5em 1.4em;
+    padding: 1.2em 1.5em 1.4em;
     border-radius: 3px;
     left: 1em;
     text-align: left;
@@ -150,15 +188,17 @@ header {
     cursor: pointer;
     transition: color .1s ease-out;
 }
-#submit{
+
+#submit {
     position: absolute;
     right: -0.9em;
     background-color: #dbdbdb;
-    
+
 }
-#submit:hover{
+
+#submit:hover {
     color: #ffda76;
-    text-shadow: 0 0 4px rgba(0,0,0,0.2);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 #add:hover {
@@ -177,14 +217,15 @@ header {
     opacity: 0;
 }
 
-#form.hidden #img_url, #form.hidden #submit {
+#form.hidden #img_url,
+#form.hidden #submit {
     display: none;
 }
 
 #img_url {
     background-color: #969696;
     border: none;
-/*    border-bottom: 2px solid #969696;*/
+    /*    border-bottom: 2px solid #969696;*/
     color: white;
     width: 30em;
     padding: .3em 1em;
@@ -207,7 +248,8 @@ footer {
     color: #b2b2b2;
     font-size: .8em;
 }
-#version{
+
+#version {
     color: #969696;
 }
 

@@ -153,6 +153,7 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
     up.classList.add('up', 'controls');
     down.classList.add('down', 'controls');
     bw.classList.add('bw', 'controls');
+    img.setAttribute('alt', 'send backward');
 
     div.append(img);
     div.append(close);
