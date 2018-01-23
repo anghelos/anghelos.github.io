@@ -12,7 +12,15 @@
 
 <body ondrop="drop(event)" ondragover="allowDrop(event)">
     <header>
-        <h2 id="title">Moodboard <span id="help">?</span></h2>
+        <h2 id="title">Moodboard</h2>
+        <div id="help">?
+            <div id="helpbox">
+                <p>Drag image to move, <br>drag from sides to resize.</p>
+                <p>Bring forward or backward with <i class="fa fa-chevron-up" aria-hidden="true"></i> and <i class="fa fa-chevron-down" aria-hidden="true"></i>.</p>
+                <p>Desaturate image with <i class="fa fa-adjust" aria-hidden="true"></i>.</p>
+                <p>The moodboard is saved in your browser!</p>
+            </div>
+        </div>
         <div id="add" class="plus_button">+</div>
         <form id="form" name="imageForm" class="hidden" action="#" onsubmit="addButton(event)">
             <input id="img_url" type="text" placeholder="Insert image url">
@@ -22,7 +30,7 @@
     <div id="start_info">
         <div class="info">Drag images here from your browser or computer, <br>or use the + button on the top right.</div>
     </div>
-    <footer>Time wasted by Anghelos Coulon  - <span id="version">v 0.6.0</span></footer>
+    <footer>Time wasted by Anghelos Coulon - <span id="version">v 0.6.2</span></footer>
     <!--  Javascript  -->
     <script src="js/interact.min.js"></script>
     <script src="https://use.fontawesome.com/44c8bfee71.js"></script>

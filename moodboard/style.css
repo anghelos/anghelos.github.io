@@ -45,7 +45,7 @@ img:after {
 
 .controls {
     position: absolute;
-    top: 5%;
+    top: 15px;
     opacity: 0;
     font-weight: 600;
     display: block;
@@ -74,7 +74,7 @@ img:after {
     top: 130%;
     left: 50%;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     opacity: .8;
     transition: opacity .2s .7s ease-out;
@@ -82,7 +82,7 @@ img:after {
 }
 
 .close {
-    right: 5%;
+    right: 25px;
     /*transform: rotate(45deg);*/
     /*font-size: 2.7em;*/
     /*margin-top: -0.18em;*/
@@ -94,7 +94,7 @@ img:after {
 }
 
 .up {
-    right: calc(5% + 40px);
+    right: 65px;
 }
 
 .up:hover:after {
@@ -103,7 +103,7 @@ img:after {
 }
 
 .down {
-    right: calc(5% + 82px);
+    right: 107px;
 }
 
 .down:hover:after {
@@ -112,9 +112,9 @@ img:after {
 }
 
 .bw {
-    right: calc(5% + 127px);
+    right: 152px;
     font-size: 1.5em;
-    margin-top: .1em;
+    margin-top: 3px;
 }
 
 .bw:hover:after {
@@ -137,50 +137,65 @@ header {
     font-weight: 600;
     font-size: 1.2em;
     color: #969696;
-    display: block;
+    display: inline-block;
     margin-left: 1em;
 }
 
 #help {
-    margin-left: 1em;
+    margin-left: 18px;
     border-radius: 50%;
     display: inline-block;
     background-color: #bfbfbf;
-    width: 1.2em;
-    height: 1.2em;
-    line-height: 1.25em;
+    width: 18px;
+    height: 18px;
     text-align: center;
     color: #dbdbdb;
-    font-size: .8em;
+    font-size: 14px;
+    font-weight: 600;
     cursor: help;
     position: relative;
     transition: all .2s ease-out;
+    top: -2px;
 }
 
-#help:after {
-    transition: all .2s ease-out;
-    content: '';
-    position: absolute;
-    background-color: #bfbfbf;
-}
 
 #help:hover {
     background-color: #969696;
     color: white;
     border-radius: 50% 0 0 50%;
 }
-
-#help:hover:after {
-    content: 'Drag image to move, \A drag from sides to resize. \A \A Bring forward or backward with 🡹 and 🡻. \A \A Desaturate image with ☯. \A \A The moodboard is saved in your browser!';
-    position: absolute;
-    white-space: pre-wrap;
-    background-color: #969696;
-    width: 13em;
+#help:hover #helpbox{
     padding: 1.2em 1.5em 1.4em;
-    border-radius: 3px;
-    left: 1em;
+    opacity: 1;
+    visibility: visible;
+    background-color: #969696;
+}
+#help:hover p{
+    display: block;
+}
+
+#helpbox{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #bfbfbf;
+    width: 17em;
+    padding: 0;
+    border-radius: 0 3px 3px 3px;
     text-align: left;
     color: white;
+    transition: all .2s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    
+    
+}
+#helpbox p{
+    margin-top: 1em;
+    display: none;
+}
+#helpbox p:first-of-type{
+    margin-top: 0;
 }
 
 .plus_button {
