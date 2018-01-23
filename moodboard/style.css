@@ -179,7 +179,7 @@ header {
     top: 0;
     left: 100%;
     background-color: #bfbfbf;
-    width: 17em;
+    width: 16.5em;
     padding: 0;
     border-radius: 0 3px 3px 3px;
     text-align: left;
@@ -187,7 +187,7 @@ header {
     transition: all .2s ease-out;
     opacity: 0;
     visibility: hidden;
-    
+    font-weight: 400;
     
 }
 #helpbox p{
