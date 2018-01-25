@@ -60,6 +60,12 @@ img:after {
     color: #ffda76;
 }
 
+.controls:active {
+    transform: translate3d(0, 1px, 0);
+    transition: none;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
 .controls:after {
     transition: opacity .2s ease-out;
     opacity: 0;
@@ -77,7 +83,7 @@ img:after {
     font-size: 14px;
     font-weight: 400;
     opacity: .8;
-    transition: opacity .2s .7s ease-out;
+    transition: opacity .2s .6s ease-out;
     text-shadow: none;
 }
 
@@ -89,8 +95,8 @@ img:after {
 }
 
 .close:hover:after {
-	content: 'Delete';
-	padding: 5px;
+    content: 'Delete';
+    padding: 5px;
 }
 
 .up {
@@ -164,17 +170,19 @@ header {
     color: white;
     border-radius: 50% 0 0 50%;
 }
-#help:hover #helpbox{
+
+#help:hover #helpbox {
     padding: 1.2em 1.5em 1.4em;
     opacity: 1;
     visibility: visible;
     background-color: #969696;
 }
-#help:hover p{
+
+#help:hover p {
     display: block;
 }
 
-#helpbox{
+#helpbox {
     position: absolute;
     top: 0;
     left: 100%;
@@ -188,13 +196,15 @@ header {
     opacity: 0;
     visibility: hidden;
     font-weight: 400;
-    
+
 }
-#helpbox p{
+
+#helpbox p {
     margin-top: 1em;
     display: none;
 }
-#helpbox p:first-of-type{
+
+#helpbox p:first-of-type {
     margin-top: 0;
 }
 
@@ -206,7 +216,11 @@ header {
     right: 0.5em;
     top: -0.31em;
     cursor: pointer;
-    transition: color .1s ease-out;
+    transition: all .1s ease-out;
+}
+.plus_button:active {
+    transform: translate3d(0, 1px, 0);
+    transition: none;
 }
 
 #submit {
