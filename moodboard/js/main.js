@@ -247,6 +247,7 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
     div.setAttribute("data-x", x);
     div.setAttribute("data-y", y);
     div.style.transform = "translate(" + x + "px, " + y + "px)";
+    div.style.zIndex = localdata.length;
 
     if (!loading) {
         div.style.maxWidth = '60%';
@@ -287,6 +288,7 @@ function addColor(hex, x = 50, y = 100, id = localdata.length, style = false) {
     div.setAttribute("data-y", y);
     div.style.transform = "translate(" + x + "px, " + y + "px)";
     div.style.backgroundColor = hex;
+    div.style.zIndex = localdata.length;
 
     //Remove "preserve aspect ratio" when resizing colors.
     //removed for now, because of bug in firefox;
