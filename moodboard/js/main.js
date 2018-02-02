@@ -3,19 +3,49 @@ var loading = false;
 var start = true;
 var alerted_storage = false;
 
-//Check to see if there are existing images
-if (window.localStorage.moodboard) {
-    loading = true;
-    localdata = JSON.parse(window.localStorage.moodboard);
-    for (var i = 0; i < localdata.length; i++) {
-        addImage(localdata[i].url, localdata[i].x, localdata[i].y, i, localdata[i].style, localdata[i].gray);
+//Check to see if the browser supports localstorage
+function storageAvailable(type) {
+    try {
+        var storage = window[type],
+            x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    } catch (e) {
+        return e instanceof DOMException && (
+                // everything except Firefox
+                e.code === 22 ||
+                // Firefox
+                e.code === 1014 ||
+                // test name field too, because code might not be present
+                // everything except Firefox
+                e.name === 'QuotaExceededError' ||
+                // Firefox
+                e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            storage.length !== 0;
     }
-    loading = false;
+}
+
+//Check to see if there are existing images
+if (storageAvailable('localStorage')) {
+    if (window.localStorage.moodboard) {
+        loading = true;
+        localdata = JSON.parse(window.localStorage.getItem('moodboard'));
+        for (var i = 0; i < localdata.length; i++) {
+            if (localdata[i].url == "hex") {
+                addColor(localdata[i].color, localdata[i].x, localdata[i].y, i, localdata[i].style);
+            } else {
+                addImage(localdata[i].url, localdata[i].x, localdata[i].y, i, localdata[i].style, localdata[i].gray);
+            }
+        }
+        loading = false;
+    }
 }
 
 function updateData() {
     try {
-        window.localStorage.moodboard = JSON.stringify(localdata);
+        window.localStorage.setItem('moodboard', JSON.stringify(localdata));
     } catch (e) {
         if (e.code == 22 || e.code == 1014) {
             if (!alerted_storage) {
@@ -31,6 +61,15 @@ function updateThis(el) {
     localdata[el.id].y = el.getAttribute('data-y');
     localdata[el.id].style = el.getAttribute('style');
     updateData();
+}
+
+
+//Checks to see if this is the first element to be added, and removes the start info
+function checkStart() {
+    if (start) {
+        start = false;
+        document.getElementById('start_info').classList.add('hidden');
+    }
 }
 
 // target elements with the "draggable" class
@@ -77,7 +116,7 @@ interact('.draggable')
         restrictSize: {
             min: {
                 width: 100,
-                height: 50
+                height: 100
             },
         },
 
@@ -108,8 +147,6 @@ interact('.draggable')
         target.setAttribute('data-y', y);
     });
 
-
-
 function dragMoveListener(event) {
     var target = event.target,
         // keep the dragged position in the data-x/data-y attributes
@@ -126,45 +163,22 @@ function dragMoveListener(event) {
     target.setAttribute('data-y', y);
 }
 
-function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gray = false) {
-    var div = document.createElement('div');
-    var img = document.createElement('img');
+function addControls(div, bw) {
     var close = document.createElement('span');
     var up = document.createElement('span');
     var down = document.createElement('span');
-    var bw = document.createElement('span');
 
     close.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
     up.innerHTML = '<i class="fa fa-chevron-up" aria-hidden="true"></i>';
     down.innerHTML = '<i class="fa fa-chevron-down" aria-hidden="true"></i>';
-    bw.innerHTML = '<i class="fa fa-adjust" aria-hidden="true"></i>'
-
-    img.src = src;
-    div.classList.add('draggable', 'just_added');
-    div.id = id;
-    if (style) {
-        div.style = style;
-    }
-    if (gray) {
-        div.classList.add('grayscale');
-    }
 
     close.classList.add('close', 'controls');
     up.classList.add('up', 'controls');
     down.classList.add('down', 'controls');
-    bw.classList.add('bw', 'controls');
-    img.setAttribute('alt', 'send backward');
 
-    div.append(img);
     div.append(close);
     div.append(up);
     div.append(down);
-    div.append(bw);
-    document.body.append(div);
-
-    div.setAttribute("data-x", x);
-    div.setAttribute("data-y", y);
-    div.style.transform = "translate(" + x + "px, " + y + "px)";
 
     close.addEventListener('click', function () {
         for (var i = parseInt(div.id) + 1; i < localdata.length; i++) {
@@ -196,11 +210,43 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
         div.style.zIndex--;
         updateThis(div);
     });
-    bw.addEventListener('click', function () {
-        div.classList.toggle('grayscale');
-        localdata[div.id].gray = !localdata[div.id].gray;
-        updateData();
-    });
+
+    if (bw) {
+        var bw = document.createElement('span');
+        bw.innerHTML = '<i class="fa fa-adjust" aria-hidden="true"></i>'
+        bw.classList.add('bw', 'controls');
+        div.append(bw);
+
+        bw.addEventListener('click', function () {
+            div.classList.toggle('grayscale');
+            localdata[div.id].gray = !localdata[div.id].gray;
+            updateData();
+        });
+    }
+}
+
+function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gray = false) {
+    var div = document.createElement('div');
+    var img = document.createElement('img');
+
+    img.src = src;
+    img.setAttribute('alt', src);
+    div.classList.add('draggable', 'just_added');
+    div.id = id;
+    if (style) {
+        div.style = style;
+    }
+    if (gray) {
+        div.classList.add('grayscale');
+    }
+
+    div.append(img);
+    addControls(div, true);
+    document.body.append(div);
+
+    div.setAttribute("data-x", x);
+    div.setAttribute("data-y", y);
+    div.style.transform = "translate(" + x + "px, " + y + "px)";
 
     if (!loading) {
         div.style.maxWidth = '60%';
@@ -215,11 +261,71 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
         updateData();
     }
 
-    if (start) {
-        start = false;
-        document.getElementById('start_info').classList.add('hidden');
-    }
+    checkStart();
 }
+
+//Add color from hex code
+function addColor(hex, x = 50, y = 100, id = localdata.length, style = false) {
+    var div = document.createElement('div');
+    var hexText = document.createElement('span');
+
+    hexText.innerHTML = hex + '<div class="picker_container"><i class="fa fa-eyedropper" aria-hidden="true"></i><input class="color_picker" onchange="changeColor(this)" type="color" value="' + hex + '"></div>';
+
+    div.classList.add('draggable', 'just_added', 'color');
+    div.id = id;
+    if (style) {
+        div.style = style;
+    }
+
+    hexText.classList.add('hex');
+
+    div.append(hexText);
+    addControls(div, false);
+    document.body.append(div);
+
+    div.setAttribute("data-x", x);
+    div.setAttribute("data-y", y);
+    div.style.transform = "translate(" + x + "px, " + y + "px)";
+    div.style.backgroundColor = hex;
+
+    //Remove "preserve aspect ratio" when resizing colors.
+    //removed for now, because of bug in firefox;
+    //    div.addEventListener('mousedown', function () {
+    //        interact('.draggable').resizable({
+    //            preserveAspectRatio: false
+    //        });
+    //    });
+    //    div.addEventListener('mouseup', function () {
+    //        interact('.draggable').resizable({
+    //            preserveAspectRatio: true
+    //        });
+    //    });
+
+    if (!loading) {
+        localdata.push({
+            url: 'hex',
+            x: x,
+            y: y,
+            zindex: localdata.length,
+            id: id,
+            color: hex
+        });
+        updateData();
+    }
+
+    checkStart();
+}
+
+function changeColor(el) {
+    var color = el.value;
+    var span = el.parentElement.parentElement;
+    var div = span.parentElement;
+    div.style.backgroundColor = color;
+    span.childNodes[0].nodeValue = color;
+    localdata[div.id].color = color;
+    updateThis(div);
+}
+
 
 //Drop external images
 function allowDrop(ev) {
@@ -288,7 +394,11 @@ function addButton(e) {
     var url = document.getElementById("img_url").value;
     document.getElementById("img_url").value = '';
     if (url != '' && url.length > 5) {
-        addImage(url);
+        if (url[0] == '#') {
+            addColor(url);
+        } else {
+            addImage(url);
+        }
     }
     toggleForm();
     document.getElementById("img_url").blur();

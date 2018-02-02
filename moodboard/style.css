@@ -36,7 +36,7 @@ img:after {
     color: white;
     padding: 55px 40px 25px;
     display: block;
-    width: 80px;
+    min-width: 80px;
     height: 70px;
     z-index: 10;
     font-weight: 600;
@@ -66,13 +66,13 @@ img:after {
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
-.controls:after {
+.controls:after, .picker_container:after {
     transition: opacity .2s ease-out;
     opacity: 0;
     content: '';
 }
 
-.controls:hover:after {
+.controls:hover:after, .picker_container:hover:after {
     position: absolute;
     color: #969696;
     background-color: white;
@@ -85,6 +85,7 @@ img:after {
     opacity: .8;
     transition: opacity .2s .6s ease-out;
     text-shadow: none;
+    padding: 5px;
 }
 
 .close {
@@ -96,7 +97,6 @@ img:after {
 
 .close:hover:after {
     content: 'Delete';
-    padding: 5px;
 }
 
 .up {
@@ -105,7 +105,6 @@ img:after {
 
 .up:hover:after {
     content: 'Bring forward';
-    padding: 5px;
 }
 
 .down {
@@ -114,7 +113,6 @@ img:after {
 
 .down:hover:after {
     content: 'Send backward';
-    padding: 5px;
 }
 
 .bw {
@@ -125,11 +123,60 @@ img:after {
 
 .bw:hover:after {
     content: 'Desaturate';
-    padding: 5px;
 }
 
 .grayscale img {
     filter: grayscale(100%);
+}
+
+.color {
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+
+.color:hover .hex {
+    opacity: 1;
+}
+
+.hex {
+    color: white;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    margin: auto;
+    opacity: 0;
+    transition: opacity .2s ease-out;
+    font-size: 1.2em;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.color_picker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.picker_container {
+    display: inline-block;
+    margin-left: .3em;
+    position: relative;
+}
+
+.picker_container:hover:after{
+    content: 'Pick a color';
+    left: -3.6em;
+    width: 3.5em;
+}
+
+header .picker_container {
+    top: 1px;
+    color: #969696;
 }
 
 header {
@@ -137,6 +184,10 @@ header {
     width: 100%;
     top: 1em;
     z-index: 10000;
+    pointer-events: none;
+}
+header *{
+    pointer-events: auto;
 }
 
 #title {
@@ -218,7 +269,9 @@ header {
     cursor: pointer;
     transition: all .1s ease-out;
 }
-.plus_button:active {
+
+.plus_button:active,
+.picker_container:active {
     transform: translate3d(0, 1px, 0);
     transition: none;
 }
@@ -230,7 +283,8 @@ header {
 
 }
 
-#submit:hover {
+#submit:hover,
+.picker_container:hover {
     color: #ffda76;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
