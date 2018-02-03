@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500');
 
 /**
  * Fix fonts that render as bold in Firefox
@@ -289,7 +290,7 @@ header * {
 }
 #menu li:hover{
     color: #fff;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 #export{
@@ -304,7 +305,7 @@ header * {
     font-weight: 500;
     right: .5em;
     color: #fff;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 #title {
