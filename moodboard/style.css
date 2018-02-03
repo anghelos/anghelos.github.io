@@ -5,8 +5,6 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500');
-
 /**
  * Fix fonts that render as bold in Firefox
  */
@@ -40,7 +38,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     overflow: hidden;
 }
 
@@ -68,7 +66,7 @@ img:after {
     min-width: 80px;
     height: 70px;
     z-index: 10;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -76,7 +74,7 @@ img:after {
     position: absolute;
     top: 15px;
     opacity: 0;
-    font-weight: 500;
+    font-weight: 600;
     display: block;
     cursor: pointer;
     transition: all .2s ease-out;
@@ -112,7 +110,7 @@ img:after {
     left: 50%;
     display: block;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     opacity: .8;
     transition: opacity .2s .6s ease-out;
     text-shadow: none;
@@ -174,7 +172,7 @@ img:after {
 .hex {
     color: white;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-    font-weight: 500;
+    font-weight: 600;
     margin: auto;
     opacity: 0;
     transition: opacity .2s ease-out;
@@ -284,7 +282,7 @@ header * {
 #menu li {
     list-style: none;
     margin-top: .3em;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2em;
     cursor: pointer;
 }
@@ -302,14 +300,14 @@ header * {
     position: absolute;
     top: -1.4em;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: 600;
     right: .5em;
     color: #fff;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 #title {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2em;
     color: #969696;
     display: inline-block;
@@ -325,7 +323,7 @@ header * {
     text-align: center;
     color: #dbdbdb;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: help;
     position: relative;
     transition: all .2s ease-out;
@@ -363,7 +361,7 @@ header * {
     transition: all .2s ease-out;
     opacity: 0;
     visibility: hidden;
-    font-weight: 300;
+    font-weight: 400;
 
 }
 
@@ -378,7 +376,7 @@ header * {
 
 .plus_button {
     color: #969696;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.5em;
     position: absolute;
     right: 0.5em;
@@ -439,7 +437,7 @@ header * {
     font-size: .9em;
     margin-top: .15em;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 #img_url::placeholder {
@@ -458,7 +456,7 @@ footer {
     right: 3%;
     color: #b2b2b2;
     font-size: .8em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 #version {
@@ -481,7 +479,7 @@ footer {
     text-align: center;
     margin: auto;
     font-size: 1.5em;
-    font-weight: 500;
+    font-weight: 600;
     color: #969696;
 }
 
