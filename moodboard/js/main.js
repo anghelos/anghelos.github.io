@@ -364,8 +364,8 @@ function dropLocal(evt, x, y) {
             if (start){
                 importBoard(f);
             }
-            else if(confirm('Replace board? Your existing moodboard won\'t be saved.\n(You\'ll be asked again)')) {
-                clear();
+            else if(confirm('Replace board? Your existing moodboard won\'t be saved.')) {
+                clear(true);
                 importBoard(f);
             }
             else{
@@ -410,7 +410,6 @@ function importBoard(file) {
                     }
                 }
             }
-
 
         };
     })(file);
@@ -466,9 +465,15 @@ function toggleForm() {
     document.getElementById('img_url').focus();
 }
 
+//Extends and retracts the menu
+function toggleMenu(){
+    document.getElementById('menu').classList.toggle('extended');
+    setTimeout(function(){document.getElementById('menu').classList.toggle('overflow');}, 500);
+}
+
 //Clear moodboard
-function clear() {
-    if (confirm("Clear moodboard?")) {
+function clear(internal = false) {
+    if (internal || confirm("Clear moodboard?")) {
 
         for (var i = 0; i < localdata.length; i++) {
             document.body.removeChild(document.getElementById(localdata[i].id));
@@ -486,7 +491,12 @@ function clear() {
     document.getElementById('menu').classList.remove('extended', 'overflow');
 }
 
-function export_board() {
+//Creates a downloadable moodboard, and links it to the "export" anchor link
+function exportBoard() {
+    if(!localdata.length){
+       alert('Your moodboard is empty! Nothing to export.');
+        return;
+       }
     var name = prompt('Name your moodboard:');
     if (name) {
         this.download = name + '.mood';
@@ -497,8 +507,18 @@ function export_board() {
 window.dragMoveListener = dragMoveListener;
 
 document.getElementById('add').addEventListener('click', toggleForm);
-document.getElementById('clear').addEventListener('click', clear);
-document.getElementById('export').addEventListener('click', export_board);
+document.getElementById('menu_button').addEventListener('click', function(){
+    toggleMenu();
+});
+document.getElementById('clear').addEventListener('click', function(){
+    clear();
+    toggleMenu();
+});
+document.getElementById('export').addEventListener('click', function(){
+    exportBoard();
+    toggleMenu();
+});
 document.getElementById('import').addEventListener('click', function(){
-    alert('You can only import by dragging your file in the window for now.\nSorry for the inconvenience!');
+    alert('You can only import by dragging your .mood file in the window for now.\nSorry for the inconvenience!');
+    toggleMenu();
 });
