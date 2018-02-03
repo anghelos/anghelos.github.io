@@ -66,13 +66,15 @@ img:after {
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
-.controls:after, .picker_container:after {
+.controls:after,
+.picker_container:after {
     transition: opacity .2s ease-out;
     opacity: 0;
     content: '';
 }
 
-.controls:hover:after, .picker_container:hover:after {
+.controls:hover:after,
+.picker_container:hover:after {
     position: absolute;
     color: #969696;
     background-color: white;
@@ -133,6 +135,7 @@ img:after {
     width: 150px;
     height: 150px;
     display: flex;
+    border-radius: 2px;
 }
 
 .color:hover .hex {
@@ -168,7 +171,7 @@ img:after {
     position: relative;
 }
 
-.picker_container:hover:after{
+.picker_container:hover:after {
     content: 'Pick a color';
     left: -3.6em;
     width: 3.5em;
@@ -185,9 +188,95 @@ header {
     top: 1em;
     z-index: 10000;
     pointer-events: none;
+
 }
-header *{
+
+header * {
     pointer-events: auto;
+}
+
+#menu_button,
+#menu {
+    color: #6c6c6c;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#menu_button {
+    margin-left: 2em;
+    cursor: pointer;
+    padding: 2px 4px 6px;
+    height: 1.5em;
+    width: 12px;
+}
+
+.menu_dot{
+    background-color: #969696;
+    width: 4px;
+    height: 4px;
+    margin-top: 2px;
+    border-radius: 3px;
+    transition: all .2s ease-out;
+}
+
+#menu_button:hover .menu_dot{
+    background-color: #4e4e4e;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+#menu {
+    margin-top: 24px;
+    border-top: 3px solid #969696;
+    position: relative;
+    text-align: right;
+    width: 0em;
+    overflow: hidden;
+    padding: 0;
+    height: 0;
+    transition: all .4s .2s ease-out, height .4s ease-out;
+}
+
+#menu.extended {
+    width: 5.5em;
+    height: 6em;
+    transition: all .4s ease-out, height .4s .2s ease-out;
+}
+#menu.extended.overflow{
+    overflow: visible;
+}
+
+#menu ul {
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    right: .7em;
+}
+
+#menu li {
+    list-style: none;
+    margin-top: .3em;
+    font-weight: 600;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+#menu li:hover{
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+#export{
+    text-decoration: none;
+    color: inherit;
+}
+
+#hover_text{
+    position: absolute;
+    top: -1.4em;
+    font-size: 1.2em;
+    font-weight: 600;
+    right: .5em;
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 #title {
@@ -195,7 +284,6 @@ header *{
     font-size: 1.2em;
     color: #969696;
     display: inline-block;
-    margin-left: 1em;
 }
 
 #help {
@@ -363,4 +451,9 @@ footer {
     font-size: 1.5em;
     font-weight: 600;
     color: #969696;
+}
+
+.drop {
+    transition: all .6s cubic-bezier(.46, -0.17, .85, .09);
+    opacity: 0;
 }

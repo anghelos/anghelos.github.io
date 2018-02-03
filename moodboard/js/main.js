@@ -30,17 +30,21 @@ function storageAvailable(type) {
 //Check to see if there are existing images
 if (storageAvailable('localStorage')) {
     if (window.localStorage.moodboard) {
-        loading = true;
-        localdata = JSON.parse(window.localStorage.getItem('moodboard'));
-        for (var i = 0; i < localdata.length; i++) {
-            if (localdata[i].url == "hex") {
-                addColor(localdata[i].color, localdata[i].x, localdata[i].y, i, localdata[i].style);
-            } else {
-                addImage(localdata[i].url, localdata[i].x, localdata[i].y, i, localdata[i].style, localdata[i].gray);
-            }
-        }
-        loading = false;
+        loadBoard();
     }
+}
+
+function loadBoard() {
+    loading = true;
+    localdata = JSON.parse(window.localStorage.getItem('moodboard'));
+    for (var i = 0; i < localdata.length; i++) {
+        if (localdata[i].url == "hex") {
+            addColor(localdata[i].color, localdata[i].x, localdata[i].y, i, localdata[i].style);
+        } else {
+            addImage(localdata[i].url, localdata[i].x, localdata[i].y, i, localdata[i].style, localdata[i].gray);
+        }
+    }
+    loading = false;
 }
 
 function updateData() {
@@ -141,7 +145,7 @@ interact('.draggable')
         y += event.deltaRect.top;
 
         target.style.webkitTransform = target.style.transform =
-            'translate(' + x + 'px,' + y + 'px)';
+            'translate3d(' + x + 'px,' + y + 'px, 0)';
 
         target.setAttribute('data-x', x);
         target.setAttribute('data-y', y);
@@ -156,7 +160,7 @@ function dragMoveListener(event) {
     // translate the element
     target.style.webkitTransform =
         target.style.transform =
-        'translate(' + x + 'px, ' + y + 'px)';
+        'translate3d(' + x + 'px, ' + y + 'px, 0)';
 
     // update the posiion attributes
     target.setAttribute('data-x', x);
@@ -181,19 +185,30 @@ function addControls(div, bw) {
     div.append(down);
 
     close.addEventListener('click', function () {
-        for (var i = parseInt(div.id) + 1; i < localdata.length; i++) {
-            var newid = localdata[i].id -= 1;
-            document.getElementById(i).id = newid;
-        }
-        localdata.splice(div.id, 1);
-        document.body.removeChild(div);
-        updateData();
 
-        //add info text if no more images.
-        if (localdata.length == 0) {
-            start = true;
-            document.getElementById('start_info').classList.remove('hidden');
-        }
+        //Animate the drop
+        div.classList.add('drop');
+        div.style.transform = 'translate3d(' + localdata[div.id].x + 'px,' + (parseInt(localdata[div.id].y) + window.innerHeight) + 'px, 0) rotate(20deg)';
+
+        //wait 1s before doing the rest
+        setTimeout(function () {
+            //Offset the ids of the other elements
+            for (var i = parseInt(div.id) + 1; i < localdata.length; i++) {
+                var newid = localdata[i].id -= 1;
+                document.getElementById(i).id = newid;
+            }
+            localdata.splice(div.id, 1);
+
+            //remove the element
+            document.body.removeChild(div);
+            updateData();
+
+            //add info text if no more images.
+            if (localdata.length == 0) {
+                start = true;
+                document.getElementById('start_info').classList.remove('hidden');
+            }
+        }, 1000);
     });
     up.addEventListener('click', function () {
         div.style.zIndex++;
@@ -246,7 +261,7 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
 
     div.setAttribute("data-x", x);
     div.setAttribute("data-y", y);
-    div.style.transform = "translate(" + x + "px, " + y + "px)";
+    div.style.transform = "translate3d(" + x + "px, " + y + "px, 0)";
     div.style.zIndex = localdata.length;
 
     if (!loading) {
@@ -266,7 +281,7 @@ function addImage(src, x = 50, y = 100, id = localdata.length, style = false, gr
 }
 
 //Add color from hex code
-function addColor(hex, x = 50, y = 100, id = localdata.length, style = false) {
+function addColor(hex, x = 200, y = 100, id = localdata.length, style = false) {
     var div = document.createElement('div');
     var hexText = document.createElement('span');
 
@@ -286,7 +301,7 @@ function addColor(hex, x = 50, y = 100, id = localdata.length, style = false) {
 
     div.setAttribute("data-x", x);
     div.setAttribute("data-y", y);
-    div.style.transform = "translate(" + x + "px, " + y + "px)";
+    div.style.transform = "translate3d(" + x + "px, " + y + "px, 0)";
     div.style.backgroundColor = hex;
     div.style.zIndex = localdata.length;
 
@@ -334,12 +349,29 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
+//Get file extension
+function getExtension(fname) {
+    return fname.slice((fname.lastIndexOf(".") - 1 >>> 0) + 2);
+}
+
 //Drop local images
 function dropLocal(evt, x, y) {
     var files = evt.dataTransfer.files; // FileList object
     // Loop through the FileList and render image files as thumbnails.
     for (var i = 0, f; f = files[i]; i++) {
 
+        if (getExtension(f.name) == 'mood') {
+            if (start){
+                importBoard(f);
+            }
+            else if(confirm('Replace board? Your existing moodboard won\'t be saved.\n(You\'ll be asked again)')) {
+                clear();
+                importBoard(f);
+            }
+            else{
+                continue;
+            }
+        }
         // Only process image files.
         if (!f.type.match('image.*')) {
             continue;
@@ -350,7 +382,7 @@ function dropLocal(evt, x, y) {
         // Closure to capture the file information.
         reader.onload = (function (theFile) {
             return function (e) {
-                // Render thumbnail.
+                //Add image at pointer location
                 addImage(e.target.result, x, y);
                 x += 20;
                 y += 20;
@@ -360,6 +392,29 @@ function dropLocal(evt, x, y) {
         // Read in the image file as a data URL.
         reader.readAsDataURL(f);
     }
+}
+
+function importBoard(file) {
+    var reader = new FileReader();
+    reader.onload = (function (theFile) {
+        return function (e) {
+            try {
+                window.localStorage.setItem('moodboard', e.target.result);
+                loadBoard();
+            } catch (e) {
+                alert('Failed to store');
+                if (e.code == 22 || e.code == 1014) {
+                    if (!alerted_storage) {
+                        alert("The storage is full (max 5MB). Try using image urls instead of local files. You can still use the app, but your changes will no longer be saved :(");
+                        alerted_storage = true;
+                    }
+                }
+            }
+
+
+        };
+    })(file);
+    reader.readAsText(file);
 }
 
 function drop(ev) {
@@ -411,6 +466,39 @@ function toggleForm() {
     document.getElementById('img_url').focus();
 }
 
+//Clear moodboard
+function clear() {
+    if (confirm("Clear moodboard?")) {
+
+        for (var i = 0; i < localdata.length; i++) {
+            document.body.removeChild(document.getElementById(localdata[i].id));
+        }
+        localdata = {};
+        try {
+            window.localStorage.removeItem('moodboard');
+        } catch (e) {
+
+        }
+        start = true;
+        document.getElementById('start_info').classList.remove('hidden');
+    }
+
+    document.getElementById('menu').classList.remove('extended', 'overflow');
+}
+
+function export_board() {
+    var name = prompt('Name your moodboard:');
+    if (name) {
+        this.download = name + '.mood';
+        this.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(localdata));
+    }
+}
+
 window.dragMoveListener = dragMoveListener;
 
 document.getElementById('add').addEventListener('click', toggleForm);
+document.getElementById('clear').addEventListener('click', clear);
+document.getElementById('export').addEventListener('click', export_board);
+document.getElementById('import').addEventListener('click', function(){
+    alert('You can only import by dragging your file in the window for now.\nSorry for the inconvenience!');
+});
