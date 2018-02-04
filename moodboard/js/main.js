@@ -498,15 +498,15 @@ function clear(internal = false) {
 }
 
 //Creates a downloadable moodboard, and links it to the "export" anchor link
-function exportBoard() {
+function exportBoard(link) {
     if (!localdata.length) {
         alert('Your moodboard is empty! Nothing to export.');
         return;
     }
     var name = prompt('Name your moodboard:');
     if (name) {
-        this.download = name + '.mood';
-        this.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(localdata));
+        link.download = name + '.mood';
+        link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(localdata));
     }
 }
 
@@ -521,7 +521,7 @@ document.getElementById('clear').addEventListener('click', function () {
     toggleMenu();
 });
 document.getElementById('export').addEventListener('click', function () {
-    exportBoard();
+    exportBoard(this);
     toggleMenu();
 });
 document.getElementById('import').addEventListener('click', function () {
