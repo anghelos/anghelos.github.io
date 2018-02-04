@@ -2,6 +2,7 @@ var localdata = [];
 var loading = false;
 var start = true;
 var alerted_storage = false;
+var debugOn = false;
 
 //Check to see if the browser supports localstorage
 function storageAvailable(type) {
@@ -361,14 +362,12 @@ function dropLocal(evt, x, y) {
     for (var i = 0, f; f = files[i]; i++) {
 
         if (getExtension(f.name) == 'mood') {
-            if (start){
+            if (start) {
                 importBoard(f);
-            }
-            else if(confirm('Replace board? Your existing moodboard won\'t be saved.')) {
+            } else if (confirm('Replace board? Your existing moodboard won\'t be saved.')) {
                 clear(true);
                 importBoard(f);
-            }
-            else{
+            } else {
                 continue;
             }
         }
@@ -423,6 +422,11 @@ function drop(ev) {
     var x = ev.clientX - 50;
     var y = ev.clientY - 50;
     for (var i = 0; i < ev.dataTransfer.types.length; i++) {
+
+        if (debugOn) {
+            alert(ev.dataTransfer.types[i]);
+        }
+        
         if (ev.dataTransfer.types[i] == 'text/html') {
             var imageUrl = ev.dataTransfer.getData('text/html');
 
@@ -466,9 +470,11 @@ function toggleForm() {
 }
 
 //Extends and retracts the menu
-function toggleMenu(){
+function toggleMenu() {
     document.getElementById('menu').classList.toggle('extended');
-    setTimeout(function(){document.getElementById('menu').classList.toggle('overflow');}, 500);
+    setTimeout(function () {
+        document.getElementById('menu').classList.toggle('overflow');
+    }, 500);
 }
 
 //Clear moodboard
@@ -493,10 +499,10 @@ function clear(internal = false) {
 
 //Creates a downloadable moodboard, and links it to the "export" anchor link
 function exportBoard() {
-    if(!localdata.length){
-       alert('Your moodboard is empty! Nothing to export.');
+    if (!localdata.length) {
+        alert('Your moodboard is empty! Nothing to export.');
         return;
-       }
+    }
     var name = prompt('Name your moodboard:');
     if (name) {
         this.download = name + '.mood';
@@ -507,18 +513,24 @@ function exportBoard() {
 window.dragMoveListener = dragMoveListener;
 
 document.getElementById('add').addEventListener('click', toggleForm);
-document.getElementById('menu_button').addEventListener('click', function(){
+document.getElementById('menu_button').addEventListener('click', function () {
     toggleMenu();
 });
-document.getElementById('clear').addEventListener('click', function(){
+document.getElementById('clear').addEventListener('click', function () {
     clear();
     toggleMenu();
 });
-document.getElementById('export').addEventListener('click', function(){
+document.getElementById('export').addEventListener('click', function () {
     exportBoard();
     toggleMenu();
 });
-document.getElementById('import').addEventListener('click', function(){
+document.getElementById('import').addEventListener('click', function () {
     alert('You can only import by dragging your .mood file in the window for now.\nSorry for the inconvenience!');
     toggleMenu();
+});
+document.getElementById('version').addEventListener('dblclick', function () {
+
+    debugOn = !debugOn;
+
+    alert('Debugging mode: ' + debugOn + '!\n(If this is a mistake, double-click the version number again to undo)');
 });
