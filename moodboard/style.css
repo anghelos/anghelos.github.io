@@ -2,6 +2,7 @@
 
 * {
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -44,6 +45,7 @@ body {
 
 .draggable {
     position: absolute;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -54,7 +56,10 @@ body {
 img {
     width: 100%;
     display: block;
+    -webkit-transition: -webkit-filter .4s ease-out;
+    transition: -webkit-filter .4s ease-out;
     transition: filter .4s ease-out;
+    transition: filter .4s ease-out, -webkit-filter .4s ease-out;
 }
 
 img:after {
@@ -77,6 +82,7 @@ img:after {
     font-weight: 600;
     display: block;
     cursor: pointer;
+    -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
     color: white;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
@@ -88,13 +94,16 @@ img:after {
 }
 
 .controls:active {
+    -webkit-transform: translate3d(0, 1px, 0);
     transform: translate3d(0, 1px, 0);
+    -webkit-transition: none;
     transition: none;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .controls:after,
 .picker_container:after {
+    -webkit-transition: opacity .2s ease-out;
     transition: opacity .2s ease-out;
     opacity: 0;
     content: '';
@@ -112,6 +121,7 @@ img:after {
     font-size: 14px;
     font-weight: 400;
     opacity: .8;
+    -webkit-transition: opacity .2s .6s ease-out;
     transition: opacity .2s .6s ease-out;
     text-shadow: none;
     padding: 5px;
@@ -155,12 +165,15 @@ img:after {
 }
 
 .grayscale img {
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
 
 .color {
     width: 150px;
     height: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-radius: 2px;
 }
@@ -175,6 +188,7 @@ img:after {
     font-weight: 600;
     margin: auto;
     opacity: 0;
+    -webkit-transition: opacity .2s ease-out;
     transition: opacity .2s ease-out;
     font-size: 1.2em;
     display: block;
@@ -243,11 +257,13 @@ header * {
     height: 4px;
     margin-top: 2px;
     border-radius: 3px;
+    -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
 
 #menu_button:hover .menu_dot{
     background-color: #4e4e4e;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -260,12 +276,14 @@ header * {
     overflow: hidden;
     padding: 0;
     height: 0;
+    -webkit-transition: all .4s .2s ease-out, height .4s ease-out;
     transition: all .4s .2s ease-out, height .4s ease-out;
 }
 
 #menu.extended {
     width: 5.5em;
     height: 6em;
+    -webkit-transition: all .4s ease-out, height .4s .2s ease-out;
     transition: all .4s ease-out, height .4s .2s ease-out;
 }
 #menu.extended.overflow{
@@ -326,6 +344,7 @@ header * {
     font-weight: 600;
     cursor: help;
     position: relative;
+    -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
     top: -2px;
 }
@@ -358,6 +377,7 @@ header * {
     border-radius: 0 3px 3px 3px;
     text-align: left;
     color: white;
+    -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
     opacity: 0;
     visibility: hidden;
@@ -382,12 +402,15 @@ header * {
     right: 0.5em;
     top: -0.31em;
     cursor: pointer;
+    -webkit-transition: all .1s ease-out;
     transition: all .1s ease-out;
 }
 
 .plus_button:active,
 .picker_container:active {
+    -webkit-transform: translate3d(0, 1px, 0);
     transform: translate3d(0, 1px, 0);
+    -webkit-transition: none;
     transition: none;
 }
 
@@ -413,6 +436,7 @@ header * {
     top: 0;
     right: 3.5em;
     opacity: 1;
+    -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
 
@@ -440,6 +464,18 @@ header * {
     font-weight: 400;
 }
 
+#img_url::-webkit-input-placeholder {
+    color: #dbdbdb;
+    opacity: 1;
+
+}
+
+#img_url:-ms-input-placeholder {
+    color: #dbdbdb;
+    opacity: 1;
+
+}
+
 #img_url::placeholder {
     color: #dbdbdb;
     opacity: 1;
@@ -464,6 +500,8 @@ footer {
 }
 
 #start_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -484,6 +522,7 @@ footer {
 }
 
 .drop {
+    -webkit-transition: all .6s cubic-bezier(.46, -0.17, .85, .09);
     transition: all .6s cubic-bezier(.46, -0.17, .85, .09);
     opacity: 0;
 }
