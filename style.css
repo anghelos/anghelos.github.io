@@ -5,6 +5,7 @@
 body{
     width: 100vw;
     height: 100vh;
+    background-image: url(video/Under-construction.jpg);
     background-size: cover;
 }
 #video {
