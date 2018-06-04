@@ -68,12 +68,16 @@ h2{
     -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
-a{
-    display: block;
-    text-decoration: none;
-    color: var(--main-color);
-    font-weight: bold;
+h4{
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
+.reverse{
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
 @media screen and (max-aspect-ratio: 1920/1080) {
   #video {
     height: 100%;
