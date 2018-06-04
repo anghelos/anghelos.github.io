@@ -2,6 +2,11 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+:root{
+    --main-color: #3cf0ab;
+}
+
 body{
     width: 100vw;
     height: 100vh;
@@ -20,31 +25,54 @@ body{
     transform: translate(-50%, -50%);
 }
 
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 58, 108, 0.2);
+}
+
 #info{
     position: absolute;
-    bottom: 0;
+    top: 30vh;
     left: 0;
     width: 100vw;
     margin: 0;
     padding: 1em 3em; 
-    background-color: rgba(255,255,255,0.9);
     font-family: "Montserrat", sans-serif;
+    text-align: center;
 }
 h1{
     margin-bottom: 0;
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.4);
 }
 h3{
     margin-top: 0;
-    color: #f2855c;
+    color: var(--main-color);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    font-size: 1.36em;
+    font-weight: no
 }
 
 h2{
     display: inline-block;
-    background-color: #f2855c;
-    padding: 0.2em 0.5em;
+    background-color: #fff;
+    padding: 0.5em 0.7em;
     border-radius: 0.2em;
-    color: #fff;
-    margin-top: 0;
+    color: black;
+    font-size: 1.3em;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
 }
 @media screen and (max-aspect-ratio: 1920/1080) {
   #video {
