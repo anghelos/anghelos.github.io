@@ -35,7 +35,7 @@ body{
 
 #info{
     position: absolute;
-    top: 30vh;
+    top: 30vmin;
     left: 0;
     width: 100vw;
     margin: 0;
