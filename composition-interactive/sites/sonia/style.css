@@ -68,7 +68,7 @@ nav {
 /* CSS liens nav*/
 .liens_nav{
     text-decoration: none;
-    color: rgb(244, 164, 96);
+    color: rgb(244, 164, 96); /*Anghelos*/
 }
 
 .liens_nav:not(:last-child) {
@@ -226,8 +226,8 @@ footer {
 }
 
 #section_portraits {
-    width: 900px;
-    margin: 50px 200px;
+    width: calc(90% - 510px); /*Anghelos*/
+    margin: 50px 4%; /*Anghelos*/
     background-color: #ffffff;
     padding: 30px;
     border-radius: 5px;
