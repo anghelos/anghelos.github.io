@@ -37,7 +37,7 @@ for (var i = 0; i < sites.length; i++) {
             }
 
             close.addEventListener('click', closeIt);
-            backdrop.addEventListener('click', closeIt);
+//            backdrop.addEventListener('click', closeIt);
 
 
             target.appendChild(iframe);

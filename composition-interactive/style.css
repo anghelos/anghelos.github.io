@@ -38,30 +38,13 @@ a {
 
 .intro {
     text-align: center;
-    margin: 1em auto 0.5em;
+    margin: 1em auto 2.5em;
     padding: 1em;
     background-color: white;
     border-radius: 5px;
     width: 80%;
     color: #f8926c;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
-}
-.info{
-    text-align: center;
-    display: inline-block;
-    color: #7b7b7b;
-    position: relative;
-    margin-bottom: 1.5em;
-}
-.info::after{
-    content: '*';
-    display: block;
-    position: absolute;
-    top: 0em;
-    left: -0.8em;
-    color: #f8926c;
-    font-weight: bold;
-    font-size: 1.5em;
 }
 
 
@@ -116,7 +99,7 @@ iframe {
     width: 100%;
     height: 100%;
     border-top: 1px solid #ededed;
-    top: 0;
+    bottom: 0;
     left: 0;
     background-color: #fff;
 }
