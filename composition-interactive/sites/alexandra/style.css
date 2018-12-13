@@ -7,7 +7,7 @@
 /*** ----- Général ----- ***/
 
 body{
-    overflow-x: hidden;
+    overflow-x: hidden; /*Anghelos*/
 }
 h1 {
     font-family: 'Permanent Marker', cursive;

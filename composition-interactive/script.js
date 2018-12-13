@@ -23,7 +23,7 @@ for (var i = 0; i < sites.length; i++) {
             goto.setAttribute('target', '_blank');
             goto.setAttribute('title', 'Ouvrir le site dans son propre onglet');
             close.classList.add('close');
-            close.setAttribute('title', 'fermer');
+            close.setAttribute('title', 'Fermer');
 
             function closeIt(e) {
                 e.stopPropagation();
