@@ -1,0 +1,253 @@
+/*----------------RESET------------------*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*----------------NAVIGATION------------------*/
+header {
+    width: 100%;
+    background-color: #171717;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 1.5em;
+    position: fixed;
+}
+
+#logo {
+    display:inline-block;
+    width: 20%;
+    max-height: 3em;
+    max-width: 10em;
+}
+
+nav {
+    text-align: right;
+    display: inline-block;
+    width: 79%;
+    vertical-align: top;
+    margin-top: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 2em;
+    font-size: 0.9em;
+}
+
+nav a:hover {
+    color:#506d29;
+}
+
+.page_presente {
+    color: #92b264;
+}
+
+
+
+/*----------------FOOTER------------------*/
+footer {
+    text-align: center;
+    color: rgb(181, 180, 180);
+    font-size: 0.75em;
+    background-color: #e5e5e5;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+/*----------------TYPOGRAPHY------------------*/
+
+h1 {
+    font-size: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.4em;
+    padding-bottom: 0.4em;
+    color: #171717;
+}
+
+h3 {
+    padding-top: 0.9em;
+}
+
+h1, h2 {
+    font-family: "Lora";
+    font-weight: normal;
+}
+
+h3, h4, h5, h6, p, nav {
+   font-family: "roboto", sans-serif;
+    
+}
+
+p {
+    line-height: 1.5em;
+    color: #535353;
+}
+
+body {
+    text-align: center;
+}
+
+/*----------------ACCUEIL------------------*/
+
+#main-accueil {
+    background-image: url(images/fond-accueil.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#titre_principal {
+    color:white;
+    text-align: center;
+    padding-top: 50vh;
+    font-size: 6em;
+}
+
+
+
+/*----------------À PROPOS------------------*/
+
+body {
+    background-color: #f2f2f2;
+}
+
+#mainapropos {
+    padding-top: 13em;
+    padding-bottom: 8em;
+    width: 80%;
+    margin: auto;
+}
+
+.mission {
+    padding-bottom: 3em;
+}
+
+.container {
+    padding-top: 8em;
+}
+
+.image-bloc {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.texte-bloc {
+    width: 40%;
+    margin-left: 10%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.papropos {
+ text-align: left;  
+}
+
+.titleapropos {
+    text-align: left;
+}
+
+.image-bloc-reverse {
+    width: 50%;
+    margin-left: 10%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.texte-bloc-reverse {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*----------------MENU------------------*/
+
+#main-menu {
+    width: 80%;
+    padding-top: 13em;
+    padding-bottom: 8em;
+    margin: auto;
+}
+
+.tea {
+    display: inline-block;
+    width: 30%;
+}
+
+.container-tea {
+width:70%;
+margin: auto;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+}
+
+#famille-the {
+padding-top: 3em;
+}
+
+.menu-item {
+    font-size: 1.2em;
+}
+
+.note {
+padding-top: 1em;
+}
+
+.description {
+    padding-bottom: 0.8em;
+}
+
+/*----------------PHOTOS------------------*/
+img {
+max-width: 100%
+}
+
+.image {
+    display: inline-block;
+    margin: 10px;
+    border: 10px;
+    border-color: aquamarine;
+} 
+
+#mainimages {
+padding-top: 10em;
+padding-bottom: 7em;
+}
+
+
+/*----------------CONTACT------------------*/
+
+
+#main-contact {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+}
+
+.icon {
+    width : 50px;
+    height : 50px;
+    display : block; 
+    background : url("images/icon_black.png") no-repeat;
+    background-size: 50px 50px;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.icon:hover {
+    background-image: url(images/icon_green.png);
+}

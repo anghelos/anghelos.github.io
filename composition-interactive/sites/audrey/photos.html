@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Photos</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+      
+    <link href="style.css" rel="stylesheet">
+   
+
+    
+
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo-blanc.svg" id="logo"></a>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À propos</a>
+            <a href="menu.html">Menu</a>
+            <a href="photos.html" class="page_presente">Photos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <main id="mainimages">
+
+        <div class="slider">
+
+            <div><img src="images/photo1.jpg" class="image"></div>
+
+            <div><img src="images/photo6.jpg" class="image"></div>
+
+            <div><img src="images/photo3.jpg" class="image"></div>
+
+            <div><img src="images/photo5.jpg" class="image"></div>
+
+            <div><img src="images/photo8.jpg" class="image"></div>
+
+            <div><img src="images/photo2.jpg" class="image"></div>
+
+        </div>
+
+    </main>
+
+    <footer id="page_footer">
+        <p>© Tous droits réservés - 2018</p>
+        <p>Site web réalisé par Audrey Picard</p>
+        <p>Composition interactive - Collège Ahuntsic</p>
+    </footer>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.slider').slick({
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 3,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+    </script>
+
+</body>
+
+</html>

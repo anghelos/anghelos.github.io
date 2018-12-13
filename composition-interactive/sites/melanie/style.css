@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+body {
+    background-color: white;
+    min-height: 100vh; /*Anghelos*/
+    position: relative; /*Anghelos*/
+    padding-bottom: 1em; /*Anghelos*/
+}
+
+#logo {
+
+    float: left;
+    margin-left: 20px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 105px;
+    background-color: #03031b;
+    overflow: hidden;
+    z-index:1000;
+}
+
+.sechistoire {
+    padding:150px 29px 0 29px; 
+    margin:0 auto; 
+    max-width: 900px;
+    align-content: center;
+}
+
+
+.secdecouvrir {
+    padding:150px 29px 0 29px; 
+    margin:0 auto; 
+    width:60%;
+    display: block;
+}
+
+nav {
+    float: right;
+    margin-top: 55px;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration-line: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    transition: all 0.5s ease-out;
+}
+
+nav a:hover{
+    color: #03031b;
+    background-color: #50beb1;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+}
+
+nav .current{
+    color: #50beb1;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a h1:hover {
+    color: #50beb1;
+}
+
+
+
+
+section img {
+    width: 100%;
+    padding-top: 105px;
+    
+}
+
+article {
+    background-color: #50beb1;
+    width:80%;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+article h1 {
+    text-align: center;
+    color: #03031b;
+    font-size: 30px;
+}
+
+article p {
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+/*** temporaire pour le width / height / background-color ***/
+.imgh {
+    height:200px; 
+    width:95%; 
+    max-width:750px;
+    display:inline-block; 
+    vertical-align:middle; 
+    margin-bottom:15px;
+}
+.texth {
+    width:95%; 
+    max-width:750px;
+    padding-bottom:75px;
+    display:inline-block; 
+    vertical-align:middle;
+    text-align: justify;
+}
+.texth h1 {
+    color:#03031b;
+}
+
+.sources, .sechistoire {
+    text-align: center;
+    position: relative;
+}
+
+
+/*** TEXTE SUR IMAGE - CODE CSS PRIS SUR : http://css-workshop.com/hover-box-text-over-images-on-hover-and-more/ ***/
+.hvrbox {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+.hvrbox .hvrbox-layer_bottom {
+	display: block;
+}
+.hvrbox .hvrbox-layer_top {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 15px;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+	opacity: 1;
+}
+.hvrbox .hvrbox-text {
+    color: white;
+	text-align: center;
+	font-size: 20px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+    cursor:pointer;
+}
+/*** FIN HOVER TEXTE SUR IMAGE ***/
+
+
+/***** SLIDER - PRIS SUR : https://speckyboy.com/open-source-carousel-sliders-css/ ****/
+.thumb {
+	height:140px;
+	width:210px;
+	top:136px;
+	left:12px;
+	position:relative;
+	background-size:contain;
+	box-shadow:-12px 0 0 12px #000;
+}
+.thumb:last-of-type {
+  box-shadow:0 0 0 12px #000;
+}
+.thumb:after {
+  content:attr(title);
+  font:normal normal 20pt 'impact';
+  position:relative;
+}
+.thumb:hover {
+	-webkit-filter: grayscale(80%);
+	-moz-filter: grayscale(80%);
+	-ms-filter: grayscale(80%);
+	-o-filter: grayscale(80%);
+	filter: grayscale(80%);
+	filter: url(grayscale.svg#greyscale);
+	filter: gray;
+}
+@-webkit-keyframes TMNT {
+	0%  { left: 0px; }
+	100% { left: -1200px; }
+}
+.slider a.prev,a.next {
+	height:91px;
+	position:absolute;
+	width:43px;
+	top:50%;
+	margin-top:-30px;
+	opacity:0.6;
+	text-indent:-99999px;
+	cursor:pointer;
+	-webkit-transition:opacity 200ms ease-out;
+}
+.slider a.prev:hover,a.next:hover {
+	opacity:1;
+}
+.prev {
+	left:0;
+	background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -200px 25px;
+}
+.next {
+	right:0;
+	background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -167px 25px;
+}
+.slider {
+	height:100vh;
+	position: relative;
+}
+.slide {
+	position:absolute;
+	height:100%;
+	width:95%;
+}
+.slider .slide:target {
+	z-index: 100;
+}
+.slider  img {
+	max-width:100%;
+	width:100%;
+	position:fixed;
+	left:0;
+    top:90px;
+}
+
+
+
+/**** FIN SLIDER *****/
+
+
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #03031b;
+    color: white;
+    position: absolute; /*Anghelos*/
+    width: 100%; /*Anghelos*/
+    bottom: 0; /*Anghelos*/
+}
+
+footer p  { font-size: 13px; }
+

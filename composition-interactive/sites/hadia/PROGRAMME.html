@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>PROGRAMME EDUCATIF</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Emilys+Candy&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#9b1fba">
+</head>
+
+<body>
+    <header>
+
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <div class="sidebar">
+
+            <h2>MENU</h2>
+            <div class="logo">
+                <img src="image/icon-3202635_640.png" alt="" class="logo">
+
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="PROGRAMME.html">PROGRAMME ÉDUCATIF</a></li>
+                <li><a href="Activites.html">Activités</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <article>
+
+
+            <h1>PROGRAMME ÉDUCATIF</h1>
+
+            <p>À la Garderie FlipeFlape, nous travaillons avec Accueillir la petite enfance, un outil de travail suggéré par le ministère de l’Éducation, un programme complet qui correspond aux valeurs de la garderie. Ce programme privilégie la stimulation du développement global de l’enfant dans un environnement physique et humain riche en expériences de toutes sortes. Axé sur le développement harmonieux des enfants, cet outil vise l’évolution de leurs capacités psychomotrices, cognitives, langagières, sociales et émotionnelles en utilisant le jeu comme mode d’apprentissage. Plusieurs activités éducatives seront proposées à votre enfant tous les jours pour l’aider dans son développement, le tout, dans un climat propice à l’apprentissage.</p>
+            
+            <a href="https://www.mfa.gouv.qc.ca/fr/publication/Documents/programme_educatif.pdf"><img class="image" id="image-p" src="image/kid-bule.jpg"></a>
+
+        </article>
+
+
+    </main>
+
+    <footer>
+        <img class="oiseau" src="image/oiseau2.svg">
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".menu-icon").click(function() {
+                $(".menu-icon").toggleClass("active");
+            })
+            $(".menu-icon").click(function() {
+                $(".sidebar").toggleClass("active")
+            })
+        })
+    </script>
+</body>      
+            
+</html>

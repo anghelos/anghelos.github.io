@@ -1,0 +1,278 @@
+/*--------RESET--------*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*--------GENERAL--------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(Images-optimisees/waves.jpg);
+    background-size: cover;
+    background-position: center left;
+    animation: move 2.5s infinite alternate ease-in-out;
+    min-height: 110vh;
+    padding-top: 1px;
+}
+
+#body_apropos {
+    background-image: url(Images-optimisees/waves_nb.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center left;
+    transition: all 5s ease;
+}
+
+#body_apropos:hover {
+    background-image: url(Images-optimisees/waves.jpg);
+}
+
+#body_portraits,
+#body_histoire_culture, #body_galerie_photos {
+    background-image: none;
+}
+
+/*--------NAVIGATION--------*/
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+#logo,
+nav {
+    display: inline-block;
+}
+
+nav {
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+#logo {
+    float: left;
+    margin-left: 40px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1.5em;
+    letter-spacing: -0.13em;
+    color: black;
+    cursor: pointer;
+}
+
+/* CSS liens nav*/
+.liens_nav{
+    text-decoration: none;
+}
+
+.liens_nav:not(:last-child) {
+    margin-right: 2em;
+    font-weight: 700;
+}
+
+.liens_nav:visited {
+    color: rgb(244, 164, 96);
+}
+
+.liens_nav:hover {
+    border-bottom: 2.5px solid black;
+    cursor: pointer;
+}
+
+.liens_nav:active {
+    background-color: rgba(244, 164, 96, 0.76);
+}
+
+/*--------CONTENU--------*/
+nav a,
+h1,
+h2 {
+    font-family: 'Montserrat' !important;
+}
+
+/*--------Accueil--------*/
+
+#titre_principal {
+    font-size: 6em;
+    margin-top: 4.5em;
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 0.2em;
+}
+
+#identite {
+    font-family: "Fredericka the great";
+    color: #ffffff;
+    font-size: 1em;
+    text-transform: none;
+}
+
+#identite:hover {
+    cursor: pointer;
+}
+
+/*--------A propos--------*/
+#main_apropos {
+    margin: auto;
+    margin-top: 200px;
+    background-color: #ffffff;
+    width: 700px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+article h2 {
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.93);
+}
+
+/*--------Histoire et culture--------*/
+.histoire_culture{
+    position: relative;
+    margin-top: 200px;
+    z-index: -1;
+}
+
+#article_histoire{
+    background-image: url(Images-optimisees/church.jpg);
+    background-size: cover;
+    background-position: left;
+    padding-bottom: 40px;
+}
+
+#article_culture{
+    background-image: url(Images-optimisees/bulls.jpg);
+    background-size: cover;
+    background-position: right;
+    padding-bottom: 40px;
+}
+
+#h1_histoire, #h1_culture{
+    position: relative;
+    top: -40px;
+    left: 20px;
+    font-size: 4em;
+    color: sandybrown;
+}
+
+#article_histoire h2, #article_culture h2{
+    margin-top: 40px;
+}
+
+#section_histoire, #section_culture{
+    width: 900px;
+    margin: auto;
+    display: block;
+    margin-bottom: 100px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#section_culture{
+    margin-top: 30px;
+}
+
+/*CSS vecteurs*/
+.img_align_center{
+    display: block;
+    margin: 0px auto;
+    height: 150px;
+    width: 150px;
+}
+
+/*--------Portraits--------*/
+
+#article_maryse_conde {
+    position: relative;
+    top: 200px;
+    background-image: url(Images-optimisees/mailboxes.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#h1_maryse_conde {
+    position: relative;
+    top: -40px;
+    left: 20px;
+    font-size: 4em;
+    z-index: -2;
+    color: sandybrown;
+}
+
+#img_maryse_conde {
+    background-image: url(Images-optimisees/Maryse_Conde_noir_blanc.jpg);
+}
+
+.portraits {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#section_portraits {
+    width: 900px;
+    margin: 50px 200px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#aside_portraits {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 200px;
+}
+
+#section_oeuvres{
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#oeuvres_maryse_conde {
+    color: #000000;
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+li {
+    color: #000000;
+}
+
+/*--------GALERIE PHOTOS--------*/
+#galerie_photos{
+    width: 100%;
+    text-align: center;
+    padding: 200px;
+}
+
+
+/*--------ANIMATION--------*/
+
+@keyframes move {
+    from {
+        background-position: left;
+    }
+
+    to {
+        background-position: right;
+    }
