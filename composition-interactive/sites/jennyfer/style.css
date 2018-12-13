@@ -13,7 +13,7 @@ body {
 /*** ----- Body ----- ***/
 
 .image_index {
-    background-image: url(_Images/Image_accueil.jpg);
+    background-image: url(Images/Image_accueil.jpg);
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
@@ -25,11 +25,11 @@ body {
     width: 2em;
     height: 2em;
     margin-left: 1em;
-    background-image: url(_Logos/logo_.svg);
+    background-image: url(Logos/logo_.svg);
 }
 
 #logo:hover {
-    background-image: url(_Logos/logo_hover.svg);
+    background-image: url(Logos/logo_hover.svg);
 }
 
 header {
@@ -88,7 +88,7 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-image: url(_Images/Image_accueil.jpg);
+    background-image: url(Images/Image_accueil.jpg);
     color: transparent;
     -webkit-background-clip: text;
     background-position: top;
@@ -187,22 +187,22 @@ div.vertical-line {
 }
 
 #CONTACTS li#Facebook {
-    list-style-image: url(_Logos/_Facebook.svg);
+    list-style-image: url(Logos/_Facebook.svg);
     list-style-position: outside;
 }
 
 #CONTACTS li#Twitter {
-    list-style-image: url(_Logos/_Twitter.svg);
+    list-style-image: url(Logos/_Twitter.svg);
     list-style-position: outside;
 }
 
 #CONTACTS li#Youtube {
-    list-style-image: url(_Logos/_Youtube.svg);
+    list-style-image: url(Logos/_Youtube.svg);
     list-style-position: outside;
 }
 
 #CONTACTS li#Instagram {
-    list-style-image: url(_Logos/_Instagram.svg);
+    list-style-image: url(Logos/_Instagram.svg);
     list-style-position: outside;
 }
 
