@@ -115,13 +115,10 @@ nav {
 
 a{
     text-decoration: none;
-}
-
-article a{
     color: #ff7367;
 }
-article a:hover{
-    color: #ff9760;
+a:hover{
+    color: #ffc567;
 }
 
 article h1{
@@ -170,4 +167,8 @@ footer{
     text-align: center;
     font-size: 80%;
     color: #d4d4d4;
+}
+
+footer a{
+    margin-left: 4em;
 }
