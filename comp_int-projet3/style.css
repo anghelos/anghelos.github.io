@@ -1,0 +1,173 @@
+body{
+    background-color: #1a1a1a;
+    font-family: sans-serif;
+    background-image: url(img/patates.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+nav, h1, h2{
+    font-family: 'Merriweather', serif;
+}
+
+.gros_titre{
+    font-size: 12vmin;
+    margin-top: 20vh;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 3vmin rgba(0, 0, 0, 0.2);
+}
+
+.bouton{
+    display: inline-block;
+    background-color: #fff;
+    padding: 1em;
+    font-weight: bold;
+    border-radius: 0.2em;
+    font-size: 1.3em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    color: #ffc567;
+    transition: all 0.1s ease-out;
+}
+.bouton:hover{
+    font-size: 1.5em;
+    background-color: #ff7367;
+}
+
+.bouton.rond{
+    border-radius: 100%;
+    width: 1.6em;
+    height: 1.6em;
+    font-size: 4em;
+    line-height: 1.6em;
+    padding: 0;
+    position: relative;
+    top: 0;
+    
+}
+.rond:hover{
+    top: 10px;
+    
+}
+
+section {
+    min-height: 100vh;
+    background-color: #e2b684;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+#section1 {
+    min-height: calc(100vh - 4em);
+    background-color: transparent;
+}
+
+#section2{
+    background-image: url(img/frites.jpg);
+}
+
+#section3{
+    background-image: url(img/puree.jpg);
+}
+
+#section4{
+    background-image: url(img/pat_roties.jpg);
+}
+
+#section5{
+    background-image: url(img/peel.jpg);
+    padding-bottom: 4em;
+}
+
+article {
+    margin: auto;
+    margin-top: 20vh;
+    width: 45em;
+    max-width: 95%;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 3em;
+    text-align: justify;
+    color: #343434;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+header {
+    height: 4em;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0,0,0,0);
+    transition: all 0.4s ease-in-out;
+}
+
+header:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+
+nav {
+    text-align: center;
+    line-height: 4em;
+}
+
+a{
+    text-decoration: none;
+}
+
+article a{
+    color: #ff7367;
+}
+article a:hover{
+    color: #ff9760;
+}
+
+article h1{
+    font-size: 2.5em;
+    margin-bottom: 0.8em;
+    border-left: 3px solid  #ff7367;
+    padding-left: 0.5em;
+}
+
+p{
+    margin-bottom: 1em;
+}
+
+p:first-of-type::first-letter{
+    float: left;
+    font-family: 'Merriweather', serif;
+    font-size: 4em;
+    line-height: 0.92em;
+    margin-right: 0.2em;
+    color: #ff7367;
+}
+
+img{
+    max-width: 40%;
+    border-radius: 3px;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.menu{
+    color: white;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    position: relative;
+    top: 0;
+    transition: all 0.1s ease-out;
+}
+
+.menu:hover{
+    top: 0.2em;
+}
+
+footer{
+    padding: 2em;
+    background-color: #1d1d1d;
+    text-align: center;
+    font-size: 80%;
+    color: #d4d4d4;
+}
