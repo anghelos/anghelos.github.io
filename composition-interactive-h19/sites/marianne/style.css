@@ -1,0 +1,218 @@
+/* --------------------------------------- BODY ----------------------------------------- */
+body {
+    background-image: url(img/Acceuil_pont.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/* --------- background images --------- */
+
+.golden_body {
+    background-image: url(img/Golden_fond.jpg)
+}
+
+.alcatraz_body {
+    background-image: url(img/Alcatraz_fond.jpg)
+}
+
+.fisherman_body {
+    background-image: url(img/Fisherman_fond.jpg)
+}
+
+/* ------------ titres --------------- */
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.titre_principal {
+    line-height: 1.1em;
+    margin-top: 0.5em;
+    font-size: 8em;
+}
+
+.titre_secondaire {
+    margin-top: 1.2em;
+    font-size: 5.5em;
+    color: black;
+}
+
+/* -------------------------------------- NAVIGATION ------------------------------------ */
+
+/* --------- nav general --------- */
+
+nav {
+    text-align: center;
+    line-height: 4em;
+    font-family: 'Noto Serif', serif;
+}
+
+a:visited {
+    color: #000000;
+}
+
+/* --------- nav menu --------- */
+
+header {
+    background-color: rgba(255, 255, 255, 0.83);
+    padding: 1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.lien_menu {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-decoration: none;
+    padding: 1em;
+    transition: all 0.1s ease-out;
+    vertical-align: middle;
+}
+
+.lien_menu:hover {
+    color: rgba(229, 42, 42, 0.84);
+}
+
+.index .lien_menu {
+    color: white;
+    font-size: 1.6em;
+    border-radius: 0.3em;
+    padding: 0.75em;
+    border: 2px solid white;
+    margin: 3.5%;
+    margin-top: 0.5em;
+    padding: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: all 0.1s ease-out;
+    display: inline-block;
+}
+
+.index .lien_menu:hover {
+    background-color: rgba(229, 42, 42, 0.37);
+}
+
+
+/* --------------------------------------- ARTICLES ------------------------------------- */
+
+article {
+    width: 700px;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 6em;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 3px;
+    text-align: justify;
+}
+
+/* --------- images article --------- */
+
+.golden_article_01 {
+    max-width: 30%;
+    float: right;
+    margin-top: 0.4em;
+    margin-left: 1.5em;
+}
+
+.golden_article_02 {
+    max-width: 31%;
+    float: left;
+    margin-top: 0.4em;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+}
+
+.alcatraz_article_01 {
+    max-width: 60%;
+    float: right;
+    margin-top: 0.3em;
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.alcatraz_article_02 {
+    max-width: 30%;
+    float: left;
+    margin-top: 0.4em;
+    margin-right: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+.fisherman_article_01 {
+    max-width: 30%;
+    float: right;
+    margin-top: 0.4em;
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.fisherman_article_02 {
+    max-width: 40%;
+    float: left;
+    margin-top: 0.4em;
+    margin-right: 1.5em;
+    margin-bottom: 0.4em;
+}
+
+/* ------------------------------------ ICONES ---------------------------------------- */
+
+.icone {
+    width: 5em;
+    margin: auto;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+
+}
+
+.icone:hover {
+    transform: scale(1.2);
+    filter: invert(0.5) sepia(2) hue-rotate(308deg) saturate(2.5);
+}
+
+.icone_sf {
+    width: 3em;
+    vertical-align: middle;
+}
+
+.index .icone_sf {
+    width: 4em;
+    margin: auto;
+    display: block;
+    margin-top: 4em;
+    filter: invert(1);
+}
+
+
+/* ---------------------------------------- FOOTER -------------------------------------- */
+
+footer {
+    font-size: 1em;
+    color: #ffffff;
+    opacity: 0.6;
+    width: 100%;
+    text-align: center;
+    bottom: 1.5em;
+    left: 0;
+}
+
+.index footer {
+    position: absolute;
+}

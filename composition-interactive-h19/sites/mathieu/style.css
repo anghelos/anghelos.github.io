@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(247, 0, 0);
+    
+}
+
+header {
+
+    padding: 1em;
+    background-color: rgba(10, 10, 10, 0.72);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.17)
+}
+
+nav {
+    display: inline-block;
+    float: right;
+}
+
+nav a {
+    display: inline-block;
+    margin-left: 1em;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-size: 1.5em;
+    font-family: 'Amiri', serif;
+}
+
+nav a:hover {
+    color: #d0d0b2
+}
+
+#imgprinc {
+    background-image: url(image/imgoptimiser/brownbear.jpg);
+    height: 100vh;
+    background-position: center;
+    width: 100%;
+    position: relative;
+
+}
+
+#section2 {
+    background-image: url(image/imgoptimiser/background.jpg);
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    background-position: center
+}
+
+#sectionp2 {
+    background-image: url(image/imgoptimiser/background.jpg);
+    background-size: cover;
+    min-height: 100%;
+    background-position: center
+}
+
+#sectionf2 {
+    background-image: url(image/imgoptimiser/background.jpg);
+    background-size: cover;
+    min-height: 100%;
+    background-position: center;
+    width: 100%;
+}
+
+#sectiono2 {
+    background-image: url(image/imgoptimiser/background.jpg);
+    background-size: cover;
+    min-height: 100%;
+    background-position: center;
+    width: 100%;
+}
+
+article {
+    background-color: rgba(175, 230, 255, 0.35);
+    height: 100%;
+    padding: 6em;
+    border-radius: 5px;
+    font-family: 'EB Garamond', serif;
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding-top: 2em;
+}
+
+#lienf {
+    float: right;
+    color: white;
+}
+
+.titre {
+    text-align: center;
+    padding-top: 40vh;
+    color: white;
+    font-size: 3em;
+
+}
+
+.bouton {
+    opacity: 0.8;
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+}
+
+.bouton:hover {
+    opacity: 1;
+    bottom: 1.5em;
+}
+
+#imgpage2 {
+    background-image: url(image/imgoptimiser/caribou.jpg);
+    height: 100vh;
+    background-position: center;
+    width: 100%;
+}
+
+#deer {
+    width: 300px;
+    float: right;
+    border-radius: 20px;
+    margin-right: 10em
+}
+
+#sectionp2 {
+    background-color: #989c9f;
+    width: 100%;
+}
+
+#moose {
+    width: 300px;
+    border-radius: 20px
+}
+
+#grostitre {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    margin-left: 2em;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+#imgfelinprinc {
+    background-image: url(image/imgoptimiser/couger.jpg);
+    height: 100vh;
+    background-position: center;
+    width: 100%;
+}
+
+#lynx1 {
+    width: 200px;
+    float: right;
+    margin-right: 20em;
+    border-radius: 20px
+}
+
+#lynx2 {
+    width: 300px;
+    border-radius: 20px
+}
+
+#imgoiseauprin {
+    background-image: url(image/imgoptimiser/goose.jpg);
+    height: 100vh;
+    background-position: center;
+    width: 100%
+}
+
+#eagle {
+    float: right;
+    border-radius: 20px;
+    margin-right: 10em;
+}
+
+#goose2 {
+    border-radius: 20px
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 1em
+}
+
+h1 {
+    font-size: 2em;
+    font-family: 'EB Garamond', serif;
+    margin: 1em;
+    margin-left: 0
+}
+
+#hoverimg1 {
+    width: 300px;
+    border-radius: 5px
+}
+
+#hoverimg1:hover {
+    transition: all 1s ease;
+    -webkit-filter: grayscale;
+    width: 350px;
+    filter: grayscale(100%);
+
+
+}
+
+#sec3 {
+    background-color: rgba(111, 129, 111, 0.62);
+    background-size: cover;
+    width: 100%;
+}
+
+#hoverimg2 {
+    width: 300px;
+    border-radius: 5px
+}
+
+#hoverimg2:hover {
+    transition: all 1s ease;
+    -webkit-filter: grayscale;
+    filter: grayscale(100%);
+    width: 350px;
+}
+
+#hoverimg3 {
+    width: 300px;
+    border-radius: 5px
+}
+
+#hoverimg3:hover {
+    transition: all 1s ease;
+    -webkit-filter: grayscale;
+    filter: grayscale(100%);
+    width: 350px;
+}
+
+footer {
+    padding: 2em;
+    width: 100%;
+}
+
+#lienhaut {
+    color: white;
+    float: right;
+    margin-right: 2em
+}
+
+.flex {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1em;
+    justify-content: space-evenly;
+}
+
+p {
+    margin-bottom: 1em;
+    max-width: 700px;
+}
+{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #434343;
+}
+
+main {
+    background-color: #ffffff;
+    width: 90%;
+    min-height: 500px;
+    margin: auto;
+    border-radius: 3px;
+    margin-top: 2em;
+    padding: 3em;
+}
+
+.slider{
+    max-width: 1000px;
+    margin: 10em;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-size: 20px;
+    opacity: .75;
+    color: #fdfdfd;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+
+.logo {width: 150px;
+float: right}
+
+ a:visited{ color: white;}
+a:hover {
+    color: #878967 
+     }
+a {color: white;
+}
+main{ background-color: #7c9685}

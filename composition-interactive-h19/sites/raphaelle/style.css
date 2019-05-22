@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    height: 110px;
+    text-align: center;
+    z-index: 10000;
+    position: relative;
+}
+
+body {
+
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo_principal {
+
+    width: 150px;
+    vertical-align: top;
+    margin: 20px;
+
+}
+
+
+
+.lien_menu {
+    font-size: 1em;
+    padding: 0.5em;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    vertical-align: top;
+    margin-top: 45px;
+    display: inline-block;
+
+
+}
+
+.lien_menu:hover {
+    color: rgb(252, 204, 204);
+}
+
+
+.titre_principal {
+
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 5em;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 0;
+
+
+
+}
+
+.bouton {
+    color: white;
+    padding: .75em;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    text-align: left;
+    background-color: none;
+    border: 2px solid white;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.2s ease-out;
+
+
+
+}
+
+.bouton:hover {
+    color: black;
+    background-color: rgba(252, 204, 204, 0.5);
+    border: 2px solid rgba(252, 204, 204, 0.5);
+
+
+
+
+}
+
+/************************ACCUEIL*******************/
+.accueil {
+
+    background-image: url(images/Tapisserie.jpg);
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 110px);
+    display: flex;
+    flex-flow: column nowrap;
+
+
+}
+
+
+.accueil .bouton {
+    margin: auto;
+    margin-top: 1em;
+}
+
+
+h1 {
+    color: black;
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    text-align: left;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+h3 {
+
+    font-size: 1.25em;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+
+
+
+/************************SERVICES*******************/
+.services {
+
+    background-image: url(images/Services_background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.titre_gauche {
+
+    position: absolute;
+    top: -.55em;
+    left: -.25em;
+
+}
+
+
+article {
+
+    background-color: rgba(255, 255, 255, 0.65);
+    margin: auto;
+    position: relative;
+    width: 80%;
+    max-width: 50em;
+    padding: 4rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.5em;
+    list-style-type: circle;
+}
+
+
+/************************PRODUITS*******************/
+.produits {
+    background-color: rgba(222, 161, 161, 0.4);
+
+}
+
+.compagnies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 80em;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 1em;
+    line-height: 1.5em;
+
+}
+
+.compagnies div {
+    max-width: 30%;
+
+}
+
+
+
+.produits h1 {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.produits h2 {
+    margin-bottom: 0.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.boutique{
+    text-align: center;
+}
+.bouton_site {
+
+    color: black;
+    background-color: rgba(255, 255, 255, 0.62);
+    display: inline-block;
+    position: relative;
+    padding: .75em;
+    padding-right: 2em;
+    padding-left: 2em;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    border: 2px solid black;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.2s ease-out;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+}
+
+.bouton_site:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid white;
+    color: white;
+
+}
+
+
+/************************TARIFS*******************/
+.tarifs {
+
+    background-image: url(images/Services_background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.liste_prix li{
+    float: left;
+    clear: left;
+    margin-top: 0.5rem;
+    
+}
+.prix{
+    float: right;
+    clear: right;
+    margin-right: 4rem;
+    margin-top: 0.5rem;
+}
+
+
+/************************EQUIPE*******************/
+.notre_equipe {
+
+    background-image: url(images/Services_background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.biographie div {
+
+    width: 475px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    
+}
+
+.biographie p {
+    display: inline-block;
+    text-align: center;
+    max-width: 100%;
+    
+}
+
+
+
+/************************CONTACT*******************/
+.nous_joindre {
+
+    background-image: url(images/image_contact.jpg);
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 110px);
+}
+
+#info {
+
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    width: 40%;
+    max-width: 90%;
+    padding: 2rem;
+    margin-top: 30px;
+    margin-left: 2%;
+    font-size: 1em;
+    text-align: center;
+    line-height: 2em;
+
+}
+
+.joindre {
+    font-size: 1.25em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+}
+
+.heures {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+#email {
+
+    margin-top: 1.5em;
+}
+
+#tel {
+    margin-top: 1.5em;
+
+}
+
+.logo_noir {
+    width: 70px;
+    margin-top: 2rem;
+    margin-left: 10px;
+    transition: all 0, 4s ease-out;
+}
+
+.logo_noir:hover {
+
+    filter: invert(0.5) sepia(2) hue-rotate(308deg) saturate(1.75);
+}
+
+
+/************************FOOTER*******************/
+footer {
+    background-color: black;
+    width: 100%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .75em;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.25rem;
+
+
+
+}
+
+.logo {
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    transition: all 0, 2s ease-out;
+
+}
+
+.logo:hover {
+
+    filter: invert(0.5);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Clearfix */
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+@media screen and (max-width: 600px){
+    .prix{
+        float: left;
+        margin-left: 1em;
+    }
+}

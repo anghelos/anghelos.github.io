@@ -1,0 +1,357 @@
+/*----------RESET----------*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*----------STYLE----------*/
+
+/*----------Général----------*/
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgb(230, 235, 224);
+}
+
+/*----------En-tête----------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    padding: 2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+/*------------- Navigation ------------*/
+nav {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+a:hover {
+color: rgb(190, 199, 180);}
+
+nav a,
+nav img {
+    text-decoration: none;
+    margin: 0 2em;
+    color: black;
+    vertical-align: middle;
+}
+
+
+#logo {
+    width: 4em;
+}
+
+/*----------Contenu----------*/
+main {
+    margin-top: 10em;
+}
+
+#logoblanc {
+    width: 80%;
+    height: 80%;
+    padding-left: 16em;
+    padding-top: 5em;
+}
+
+.coffeeshop {
+
+    width: 100%;
+    height: 30em;
+    background-size: cover;
+    background-position: center;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+}
+
+article {
+    padding: 2.5em;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+}
+
+.articlecouleur {
+    padding: 2.5em;
+    background-color: rgb(230, 235, 224);
+    width: 50%;
+}
+
+#comptoir {
+    background-image: url(photo_modif/comptoir.jpg);
+    background-position: center 50%;
+    margin-bottom: 2em;
+
+}
+
+.tassecloseup {
+    width: 50%;
+    height: 30em;
+    background-size: cover;
+    background-position: center;
+}
+
+#cafe {
+    background-image: url(photo_modif/barista.jpg);
+}
+
+/*----------APROPOS----------*/
+
+
+#lecoffeeshopnoir {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    background-color: white;
+}
+
+#graindecafe {
+    background-image: url(photo_modif/grain.jpg)
+}
+
+.graindecafecloseup {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+#logonoir {
+    background-image: url(logo/Le_coffeeshop_logo_noir.svg);
+
+}
+
+.lecoffeeshopnoir {
+    width: 50%;
+    height: 18em;
+    background-size: cover;
+    background-position: center;
+}
+
+.machineacafecloseup {
+    background-image: url(photo_modif/machine_a_cafe.jpg);
+}
+
+#machineacafe {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.tasseacafecloseup {
+    background-image: url(photo_modif/tasse_a_cafe.jpg);
+}
+
+#tasseacafe {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.graindecafe {
+    background-image: url(photo_modif/saccafe.jpg);
+}
+
+#graindecafecloseup {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+h1,
+h2 {
+    font-family: 'Montserrat', 700, sans-serif;
+    font-size: 2em;
+    text-align: left;
+
+}
+
+p {
+    font-family: 'Noto', 400, sans-serif;
+    font-size: 1.2em;
+    line-height: 28px
+}
+
+#infolettre {
+    background-color: rgb(230, 235, 224);
+    padding: 11em;
+    margin: 2em 2em;
+
+}
+
+/*----------Menu----------*/
+
+#titrecentre {
+    font-family: 'Montserrat', 700, sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+#txtcentre {
+    text-align: center;
+    padding: 2em 2em 2em 2em;
+}
+
+.flexboxmenu {
+    display: flex;
+    justify-content: center;
+    padding-left: 2em;
+    width: 100%;
+
+
+}
+
+
+#titre {
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    background-color: white;
+    padding: 2em;
+
+
+}
+
+
+#boulangerie {
+    background-size: cover;
+    width: 20em;
+    height: 30em;
+    padding: 2em;
+
+
+}
+
+#vienoiserie {
+    background-size: cover;
+    width: 20em;
+    height: 30em;
+    padding: 2em;
+
+}
+
+#patisserie {
+    background-size: cover;
+    width: 20em;
+    height: 30em;
+    padding: 2em;
+
+}
+
+#saccafe {
+    width: 50%;
+    height: 40%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/*----------Nous joindre----------*/
+#cafeinterieur {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.flexcontainer {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 55em;
+    margin: 2em;
+}
+
+#boiteverte {
+    width: 100%;
+    padding: 5em;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+#google {
+    width: 100%;
+}
+
+.adresse {
+    padding-right: 2em
+}
+
+/* inscrire à infolettre */
+
+h3 {
+    text-align: center;
+}
+
+
+/* Add some padding and a grey background color to containers */
+.container {
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+/* Style the input elements and the submit button */
+input[type=text],
+input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Add margins to the checkbox */
+input[type=checkbox] {
+    margin-top: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: rgb(191, 211, 193);
+    color: white;
+    border: none;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+
+}
+
+/*----------Pied----------*/
+
+footer {
+    background-color: white;
+    padding: 1em 3em;
+    text-align: center;
+    font-size: 0.8em;
+    color: black;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    nav a,
+    nav img {
+        margin: 0 1em;
+    }
+}

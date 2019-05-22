@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Marie-Pier Therriault thérapeute</title>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen|Belleza' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="menu">
+
+        <div id="hamburger">
+            <i class="fas fa-bars ouvrir"></i>
+            <i class="fas fa-times fermer"></i>
+        </div>
+
+        <div>
+            <a href="index.html">
+                <img id="logo" src="img/logo_blanc.svg" alt="Coeur">
+            </a>
+        </div>
+
+        <a id="accueil-menu" href="index.html">Accueil</a>
+        <a id="services" href="services.html">Services</a>
+        <a id="contact" href="contact.html">Contact</a>
+        <a id="a_propos" href="a_propos.html">À propos</a>
+
+    </header>
+
+    <section id="accueil">
+
+        <section id="accueil-box">
+            <h1>Marie-Pier Therriault</h1>
+            <p id="sous-titre">Thérapeute énergétique</p>
+            <div class="cta">
+                <a href="/contact.html">Prendre rendez-vous</a>
+            </div>
+        </section>
+
+    </section>
+
+    <main>
+
+        <h2>Ce que j'offre</h2>
+
+        <section id="main-box-2" class="main-boxes">
+
+            <a href="/services.html#main-box-lecture">
+                <h3>Lecture d'âme et canalisation</h3>
+                <p class="sous-titre-h3">Pour vous guider dans votre cheminement personnel</p>
+            </a>
+
+        </section>
+
+        <section id="main-box-3" class="main-boxes">
+
+            <a href="/services.html#main-box-antenne">
+                <h3>Antenne de lécher</h3>
+                <p class="sous-titre-h3">Pour vous libérer de vos blocages émotionnels</p>
+            </a>
+
+        </section>
+
+        <section id="main-box-4" class="main-boxes">
+
+            <a href="/services.html#main-box-hypnose">
+                <h3>Hypnose</h3>
+                <p class="sous-titre-h3">Pour améliorer vos relations avec les autres</p>
+            </a>
+
+        </section>
+
+        <section id="main-box-5" class="main-boxes">
+
+            <a href="/services.html#main-box-access">
+                <h3>Access Bars</h3>
+                <p class="sous-titre-h3">Pour vous libérer de vos pensées et limitations</p>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <a id="social-box" href="https://facebook.com/mptherapeute">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <p>
+            Marie-Pier Therriault<br>
+            <a href="mailto:mariepier.therr@gmail.com">mariepier.therr@gmail.com</a><br>
+            <a href="tel:8193456418">819 345-6418</a><br>
+            Mardi et vendredi&nbsp;: 10, rue Vaillancourt, Trois-Rivières (Québec) G1T 1Z2<br>
+            Samedi&nbsp;: 1287, avenue Maguire, Québec (Québec) G8T 1Y5
+        </p>
+
+    </footer>
+
+    <script>
+        var hamburger = "hamburger";
+        var lemenu = "menu";
+        var laclasse = "ouvert";
+
+        function ajouterClasse() {
+            document.getElementById(lemenu).classList.toggle(laclasse);
+        }
+
+        document.getElementById(hamburger).addEventListener("click", ajouterClasse);
+
+    </script>
+
+</body>
+
+</html>

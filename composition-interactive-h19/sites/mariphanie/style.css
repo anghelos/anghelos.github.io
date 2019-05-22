@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/**************texte***************/
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin-top:
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    color: white;
+    padding-top: 30px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding-top: 7px;
+    margin-top: 10px;
+}
+
+
+/****************bodypart*********************/
+
+header {
+    background-color: black;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 10em;
+    text-align: center
+}
+
+#titre {
+    font-size: 5em;
+    padding-top: 30px;
+
+}
+
+#pageprinc {
+    margin: auto;
+    margin-top: 100px;
+    font-size: 10em;
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 90%;
+    padding: 15px;
+    padding-top: 35px;
+}
+
+body {
+    background-image: url(img/ac1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+article {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 5em;
+    padding: 20px;
+
+}
+
+
+footer {
+    background-color: black;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+/*************navigation*******************/
+
+nav {
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Merriweather', serif;
+}
+
+
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #4e5569;
+    padding: 1px 30px;
+    border-radius: 20%;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:hover {
+    color: aqua;
+}
+
+
+
+
+/******************Images*********************/
+
+#spacewar {
+    width: 25%;
+    max-width: 15em;
+    float: right;
+    margin-left: 15px;
+}
+
+#spaceinvaders {
+    width: 20%;
+    float: left;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+#halopic {
+    width: 20vw;
+    float: left;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+#acpochette {
+    float: right;
+    width: 7%;
+    max-width: 10em;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+#pokemon {
+    width: 20%;
+    max-width: inherit;
+    float: left;
+    margin-top: 12px;
+    margin-right: 10px;
+    margin-bottom: 4px;
+
+}
+
+#witcher {
+    width: 30%;
+    max-width: 30em;
+    margin-top: 20px;
+    margin-left: 15px;
+    float: right;
+
+}
+
+#pac {
+    width: 10em;
+    float: right;
+    margin: 10px;
+}
