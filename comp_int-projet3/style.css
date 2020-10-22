@@ -100,8 +100,9 @@ header {
     height: 4em;
     position: sticky;
     top: 0;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0.2);
     transition: all 0.4s ease-in-out;
+    backdrop-filter: blur(10px); /* Fonctionne seulement sur Webkit */
 }
 
 header:hover{
