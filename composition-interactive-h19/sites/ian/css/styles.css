@@ -137,7 +137,7 @@ h6 {
 /*--Banniere--*/
 
 .banniere {
-    background-image: url(/images/voyage/ZoneHero.jpg);
+    background-image: url(images/voyage/ZoneHero.jpg);
     background-attachment : fixed;
 }
 
@@ -175,27 +175,27 @@ div.article article:hover{
 }
 
 #indo {
-    background-image: url(/images/voyage/plage.jpg);
+    background-image: url(images/voyage/plage.jpg);
 }
 
 #eau {
-    background-image: url(/images/voyage/eau.jpg);
+    background-image: url(images/voyage/eau.jpg);
 }
 
 #europe {
-    background-image: url(/images/voyage/europe.jpg);
+    background-image: url(images/voyage/europe.jpg);
 }
 
 #greece {
-    background-image: url(/images/voyage/greece.jpg);
+    background-image: url(images/voyage/greece.jpg);
 }
 
 #aire {
-    background-image: url(/images/voyage/aire.jpg);
+    background-image: url(images/voyage/aire.jpg);
 }
 
 #soleil {
-    background-image: url(/images/voyage/plage2.jpg);
+    background-image: url(images/voyage/plage2.jpg);
 }
 
 #bati {
@@ -212,11 +212,11 @@ div.article article:hover{
     
 }
 #apropos1{
-    background-image: url(/images/voyage/bati.jpg)
+    background-image: url(images/voyage/bati.jpg)
 }
 
 #apropos2{
-    background-image: url(/images/voyage/aire.jpg)
+    background-image: url(images/voyage/aire.jpg)
 }
 
 /*--------------Carousel--------------*/
@@ -254,20 +254,20 @@ div.article article:hover{
 }
 
 .p1{
-    background-image: url(/images/personne/p1.jpg)
+    background-image: url(images/personne/p1.jpg)
 }
 
 .p2{
-    background-image: url(/images/personne/p2.jpg)
+    background-image: url(images/personne/p2.jpg)
 }
 .p3{
-    background-image: url(/images/personne/p3.jpg)
+    background-image: url(images/personne/p3.jpg)
 }
 .p4{
-    background-image: url(/images/personne/p4.jpg)
+    background-image: url(images/personne/p4.jpg)
 }
 .p5{
-    background-image: url(/images/personne/p5.jpg)
+    background-image: url(images/personne/p5.jpg)
 }
 
 h4{
