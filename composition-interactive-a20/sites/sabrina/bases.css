@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*Ne fonctionne que sur Chrome, Firefox et Opera*/
+}
+
+section {
+    overflow: hidden;
+
+}

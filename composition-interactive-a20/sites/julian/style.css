@@ -1,0 +1,410 @@
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+html {
+    scroll-behavior: smooth;
+    /*Ne fonctionne que sur Chrome, Firefox et Opera*/
+}
+
+section {
+    overflow: hidden;
+}
+
+header {
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 5rem;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem;
+    position: fixed;
+    z-index: 1000;
+}
+
+header a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    transition: all 250ms ease-in-out;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0 0 0 2rem;
+    
+}
+
+header a:hover {
+    letter-spacing: 2px;
+}
+
+section {
+    height: 100vh;
+    text-align: center;
+}
+
+#accueil01 {
+    background-image: url(images/earth01.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    border-top: solid;
+    border-color: black;
+    background-attachment: fixed;
+}
+
+#accueil01 h1 {
+    color: white;
+    font-family: 'gugi', sans-serif;
+    font-weight: 300;
+    font-size: 6rem;
+}
+
+#accueil01 p {
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+#accueil01 article {
+    padding: 25rem 0 0 0;
+}
+
+#accueil01 a {
+    display: inline-block;
+    padding: 3rem;
+}
+
+
+#accueil02 {
+    background-image: url(images/austronaut02.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    background-attachment: fixed;
+}
+
+#accueil02 p {
+    color: black;
+    font-family: 'jost', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+#accueil02 article {
+    display: inline-block;
+    max-width: 300px;
+    margin: 40vh 50vh 1vh 1vh;
+}
+
+#accueil02 a {
+    display: inline-block;
+    padding: 3rem;
+}
+
+#accueil03 {
+    background-image: url(images/spacelaunch.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    background-attachment: fixed;
+}
+
+#orbite01 {
+    background-image: url(images/earth02.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    background-attachment: fixed;
+    color: black;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+}
+
+#orbite01 h1 {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+#orbite01 p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#orbite01 article {
+    display: inline-block;
+    max-width: 800px;
+    min-width: 800px;
+    padding: 25rem 0 0 0;
+}
+
+#orbite01 a {
+    display: inline-block;
+    padding: 3rem;
+}
+
+#orbite02 {
+    background-image: url(images/earth03.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    background-attachment: fixed;
+}
+
+#orbite02 p {
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;
+    padding: 1rem;
+    border: solid 1px white;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#orbite02 article {
+    display: inline-block;
+    max-width: 700px;
+    min-width: 7o0px;
+    padding: 35rem 0 0 0;
+}
+
+#lune01 {
+    background-image: url(images/moon01.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'jost', sans-serif;
+}
+
+#lune01 h1 {
+    font-weight: 300;
+    font-size: 5rem;
+}
+
+#lune01 p {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+#lune01 article {
+    padding: 25rem 0 0 0;
+    display: inline-block;
+    max-width: 700px;
+    min-width: 700px;
+    padding: 25rem 0 0 0;
+}
+
+#lune01 a {
+    display: inline-block;
+    padding: 3rem;
+}
+
+
+#lune02 {
+    background-image: url(images/earthfrommoon.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    background-attachment: fixed;
+}
+
+#lune02 p {
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;
+    padding: 1rem;
+    border: solid 1px white;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#lune02 article {
+    display: inline-block;
+    max-width: 700px;
+    min-width: 700px;
+    padding: 35rem 0 0 0;
+}
+
+
+
+h2 {
+    display: block;
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    padding: 50vh 10rem 0 10rem;
+
+}
+
+#contact {
+    background-image: url(images/austronaut01.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+}
+
+
+#contact p {
+    display: block;
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;
+    padding: 1rem;
+    border: solid 1px white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40vh;
+    max-width: 700px;
+    min-width: 700px;
+}
+
+form {
+    display: inline-block;
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;
+    padding: 2rem 2rem;
+    text-align: left;
+}
+
+
+input {
+    display: block;
+    color: black;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+button {
+    display: block;
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*le bouton ne fonctionne pas et envoi sur une page blanche. J'ai donc mis une petite animation via un :hover pour que l'on ne puisse pas cliquer dessus. Pour le fun :)*/
+button:hover{
+    margin-top: 7rem;
+}
+
+img{
+    transition: all 300ms ease-in-out;
+}
+
+img:hover{
+   transform: scale(1.2);
+    opacity: 0.5;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 5rem;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'jost', sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+/************************************animation des h1*/
+h1{
+    animation-name: move;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes move{
+    0% {letter-spacing: 0}
+    50% {letter-spacing: 12px}
+    100% {letter-spacing: 0}
+}
+
+
+/*************************animation transitions page*/
+body {
+    background-color: black;
+}
+
+@keyframes slide {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#accueil01, #orbite01, #lune01, #contact, header {
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+
+/********************************************boutons*/
+.boutonlien {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    padding: 1.5rem;
+    margin: 2.5rem;
+    font-size: 1.3rem;
+    border: solid 1px white;
+    border-radius: 50px;
+    transition: all 300ms ease-in-out;
+}
+
+.boutonlien:hover{
+    color: black;
+    background-color: white;
+}
+
+.boutoncontact {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-family: 'jost', sans-serif;
+    font-weight: 300;
+    padding: 1.1rem;
+    margin: 3rem;
+    font-size: 1.15rem;
+    border: solid 1px white;
+    border-radius: 50px;
+    transition: all 300ms ease-in-out;
+}
+
+.boutoncontact:hover{
+    color: black;
+    background-color: white;
+}

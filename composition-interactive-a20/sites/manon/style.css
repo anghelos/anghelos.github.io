@@ -1,0 +1,162 @@
+/*****HEADER****************/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    background-color: rgba(186, 207, 226, 0.49);
+
+}
+body {
+    font: 12px Comfortaa, Roboto, sans-serif;
+    font-size: 13px;
+    color: cornflowerblue;
+    background-color: aliceblue;
+}
+
+.titre_central {
+    width: 300px;
+    margin-left: 60%
+}
+
+#mainpic h1 {
+    text-align: right;
+    font-size: 30px;
+    color: #FFF;
+}
+
+#mainpic h2 {
+    text-align: right;
+    color: darkgoldenrod;
+}
+
+#mainpic {
+    padding-top: 30vh;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(img/eric-han-WebJ6fmN1D-h0-unsplash.jpg)
+}
+
+.menu {
+    text-align: center;
+    text-decoration: none;
+    color: darkgoldenrod;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 23px;
+}
+
+.menu:hover {
+    color: #BAD1F3;
+    background-color: dimgrey;
+    margin: auto;
+}
+
+.images_apropos {
+    display: flex;
+    background-color: rgba(186, 207, 226, 0.49);
+    padding-top: 10px;
+    padding-bottom: 0;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.images_apropos img {
+    width: 30%;
+    margin: 1rem;
+    border-bottom-color: #ffff;
+}
+
+.container {
+    display: block;
+    position: relative;
+    width: 940px;
+}
+
+.histoire .h1 {
+    padding-top: 20px;
+    text-align: center;
+    text-decoration-color: antiquewhite;
+}
+
+/**********NAVIGATION*****************/
+/ img {
+    max-width: 1027px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    width: 90%;
+
+}
+
+.container .apropos {
+    padding-top: 20px;
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 2em;
+}
+
+/*
+.pageapropos {
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.65);
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    padding: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+*/
+
+.gros_titre h1 {
+    text-align: left;
+    color: black;
+}
+
+.page_histoire {
+    background-image: url(img/cat_paw_web8.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2em;
+}
+
+.article_histoire {
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.65);
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.container .histoire {
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding-top: 1em;
+    margin-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.footer {
+    width: inherit;
+    margin-left: 23px;
+
+}
