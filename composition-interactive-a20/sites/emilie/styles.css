@@ -172,17 +172,19 @@ h2 {
     margin: auto;
     bottom: 0;
     margin-top: 10vh;
+    transform: translateX(13px);
 }
 
 .songs {
     margin-top: 5vh;
     display: flex;
     position: relative;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 65vh;
-    padding-right: 65vh;
+}
+.songs > a{
+    margin: 1em;
 }
 
 a img {
