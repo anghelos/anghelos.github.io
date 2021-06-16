@@ -1,0 +1,507 @@
+/*********** RESET ***********/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*Ne fonctionne que sur Chrome, Firefox et Opera*/
+}
+
+section {
+    overflow: hidden;
+    /*  Un petit "hack" pour empêcher les marges de vos éléments de dépasser la section  */
+}
+
+/*********** STYLE ***********/
+
+body {
+    background-color: rgba(229, 152, 28, 0.22);
+    font-family: sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: auto;
+}
+
+#logo {
+    height: 320px;
+    position: absolute;
+    margin: auto;
+    display: block;
+    top: 8em;
+    left: 0;
+    right: 0;
+}
+
+
+.villes {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 40px;
+    padding-left: 0px;
+    margin-left: 55px;
+}
+
+#page_accueil {
+    position: fixed sticky;
+    top: 70%;
+    width: 520px;
+    border-left: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.44);
+    max-height: 50px;
+    padding: 15px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+#accueil {
+
+    min-height: calc(100vh - 4em);
+    background-image: url(img_opt/hero-canoe.jpg);
+    background-color: transparent;
+    background-attachment: scroll;
+}
+
+.villes {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 40px;
+    padding-left: 0px;
+    margin-left: 55px;
+}
+
+.villes img {
+    height: 90px;
+    margin-left: 2px;
+}
+
+.villes .lien {
+    font-size-adjust: none;
+    position: relative;
+    font-size: 20px;
+    margin: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+#topo_villes {
+    min-height: 40vh;
+    background-color: rgba(229, 152, 28, 0.22);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    display: grid;
+    float: none;
+    line-height: 20, 0167px;
+    position: static;
+    z-index: auto;
+}
+
+.nom {
+    font-family: 'Yusei Magic', sans-serif;
+    text-shadow: 2px 2px rgba(136, 87, 8, 0.78);
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    font-size: 55px;
+}
+
+.sous-section {
+    font-family: 'Yusei Magic', sans-serif;
+    margin-top: 25px;
+    font-size: 35px;
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+    color: #061841;
+
+}
+
+section {
+    min-height: 60vh;
+    background-color: rgba(229, 152, 28, 0.22);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#accueil {
+
+    min-height: calc(100vh - 4em);
+    background-image: url(img_opt/hero-canoe.jpg);
+    background-color: transparent;
+    background-attachment: scroll;
+}
+
+.categories {
+    display: grid;
+    position: inherit;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 25px;
+    padding-left: auto;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.categories img {
+    height: 225px;
+    border-radius: 50px;
+}
+
+.categories-lien {
+    position: relative fixed;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size-adjust: none;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.contenant_titre {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.contenant_titre header {
+    position: sticky;
+    top: 0;
+    width: 680px;
+    border-left: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.44);
+    max-height: 50px;
+    max-width: 60%;
+    padding: 15px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 680px;
+    border-left: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.44);
+    max-height: 50px;
+    max-width: 60%;
+    padding: 15px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.noms_logements,
+.noms_activitees {
+    font-family: 'Raleway', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    text-align: right;
+    font-size: 20px;
+    color: #061841;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 20rem;
+    font-size: 17px;
+    color: #061841
+}
+
+article nav {
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    font-size: 18px;
+    margin-right: -20px;
+    margin-top: 30px;
+}
+
+#disponibilites {
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    font-size: 18px;
+    margin-top: 5px;
+
+}
+
+#site_internet {
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+#logements-pagecouverture {
+    min-height: 3em;
+    background-image: url(img_opt/hero-chalet.jpg);
+    background-color: transparent;
+    background-attachment: scroll;
+
+}
+
+.logements,
+.activitees {
+    min-height: 70px;
+    background-color: rgba(229, 152, 28, 0.22);
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 80px;
+    border-radius: 30px
+}
+
+.autre {
+    min-height: 30px;
+    background-color: rgba(229, 152, 28, 0.22);
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 80px;
+    border-radius: 30px
+}
+
+p .autre {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 20rem;
+    font-size: 17px;
+    color: #061841
+}
+
+#devenir_hote {
+    height: 20px;
+    width: 200px;
+    background-size: contain;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 30px;
+    text-align: center;
+
+}
+
+#recommandation {
+    height: 20px;
+    width: 200px;
+    background-size: contain;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 30px;
+}
+
+
+#contact {
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 20rem;
+    font-size: 17px;
+    color: #061841
+}
+
+
+
+#micro-maison {
+    background-image: url(img_opt/micro-maison.jpg);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    border-radius: 0;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 30px;
+}
+
+#gite {
+    background-image: url(img_opt/ferme.jpg);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    border-radius: 0;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 30px;
+}
+
+#paradis {
+    background-image: url(img_opt/paradis.jpg);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    border-radius: 0;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 30px;
+}
+
+#activites {
+    min-height: calc(100vh - 4em);
+    background-image: url(img_opt/hero-activites.jpg);
+    background-color: transparent;
+    background-attachment: scroll;
+
+}
+
+#kayak {
+    background-image: url(img_opt/kayak.jpg);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    border-radius: 0;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 30px;
+}
+
+#randonnee {
+    background-image: url(img_opt/randonnee.jpg);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    border-radius: 0;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 30px;
+}
+
+#alpagas {
+    background-image: url(img_opt/alpagas.jpg);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    border-radius: 0;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 30px;
+}
+
+#hote {
+    min-height: calc(100vh - 4em);
+    background-image: url(img_opt/hero-hote.jpg);
+    background-color: transparent;
+    background-attachment: scroll;
+
+}
+
+
+.contenant_titre {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.contenant_titre header {
+    position: sticky;
+    top: 0;
+    width: 680px;
+    border-left: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.44);
+    max-height: 50px;
+    max-width: 60%;
+    padding: 15px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+
+h4 {
+    font-size: 15px;
+    text-align: right;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin: 30px;
+    text-decoration: none;
+    color: #061841;
+}
+
+    
+a:hover {
+    color: #e5981c;
+}
+
+a.liens-accueil {
+    font-size: 20px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 400;
+
+}
+
+a.liens-accueil:hover {
+    font-size: 19px;
+    
+
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    padding: 2px;
+    color: white;
+    text-align: center;
+}
+
+#navfooter {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}

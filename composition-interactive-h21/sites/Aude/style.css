@@ -1,0 +1,291 @@
+/*********** RESET ***********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/************ COULEURS **********/
+
+/** #9a7ab9 mauve foncé, #cab6ff mauve pale, #df643b rouge, #ede6dc beige ***/
+
+
+/************ INDEX **********/
+
+body {
+
+font-family: 'Playfair Display', PTSerif, NotoSerif, serif;
+background-color: #df643b;
+
+}
+
+img {
+max-width: 100%;
+    
+}
+
+
+
+header {
+
+background-color:#df643b;
+text-align: center;
+width:100%;
+padding-bottom:1rem;
+padding-top:0.5rem;
+
+    
+}
+ 
+
+nav {
+    
+font-size: 1rem;
+text-align: center;
+font-family: 'Poppins',helvetica, roboto, sans-serif; 
+
+  
+
+}
+
+nav a {
+
+color:#ede6dc;  
+text-decoration: none;
+vertical-align: middle;
+margin-right:20px;
+margin-left:20px;
+  
+    
+}
+
+a { 
+
+color: #ede6dc;
+   
+   
+}
+
+a:hover { 
+
+    color: #cab6ff;
+ 
+}
+
+
+.logo {
+    
+
+max-width: 9%;
+vertical-align: middle;
+  
+
+}
+
+   
+.lumiere{
+  
+background-image: url(Images/elena-joland-D5OKi0M_djQ-unsplash.jpg);
+background-position: center;
+background-attachment: fixed; 
+padding: 300px;
+overflow: hidden;   
+    
+}
+
+
+.grostitre
+
+{
+
+font-size: 8rem;
+text-align: center;
+color:#df643b;   
+    
+}
+
+
+
+/***** STUDIO ****/
+
+
+.studiodroite {
+    
+
+max-width:35%;  
+position: relative;
+left: 60rem;
+top:-4rem;
+    
+}
+
+.studiodroiteh3 {
+    
+color:#ede6dc;
+text-align: left;
+position: relative;
+font-size:2.5rem; 
+top:30rem;  
+right:30rem;
+margin: auto;
+padding: auto;
+max-width: 40rem;
+
+    
+}
+
+.studiogauche {
+    
+max-width:35%;
+position: relative;
+left:4rem;
+top:-5rem;
+   
+
+}
+
+.studiodgaucheh3 {
+ 
+color:#ede6dc;
+text-align:left;
+position: relative;
+font-size:2.5rem; 
+top: 30rem;
+left: 25rem;
+margin: auto;
+padding: auto;   
+    
+}
+
+
+
+
+/**** SERVICES****/
+
+
+.dessinfleur {
+
+    
+position: absolute;
+left:65rem;
+top: 27rem;
+   
+}
+
+
+.service {
+    
+max-width: 40rem;
+background-color: #ede6dc;
+color: #df643b; 
+padding: 3rem;
+margin: auto;
+margin top: 5rem;
+margin-bottom: 5rem;       
+    
+    
+}
+    
+
+h3 {
+    
+font-family: 'Playfair Display',PTSerif, NotoSerif,  serif;
+text-align: center;
+padding-bottom:2rem;
+margin: auto;
+font-size: 3rem; 
+    
+    }
+
+
+p {
+       
+margin-top:1rem;
+margin-bottom:2rem;
+text-align: left;
+font-size: 1.5rem;
+font-family: 'Poppins', helvetica,roboto, sans-serif; 
+}
+
+
+/**** FLEURS ****/
+
+
+
+.texteblocfleurs{
+    
+padding-top: 5rem;
+text-align: left;
+margin-left:20rem;
+font-size:2.5rem;
+color: #ede6dc;
+   
+    
+    
+}
+
+
+.fleurdroite {
+ 
+max-width: 30%;
+position: relative;
+left:60rem;
+
+    
+    
+}
+
+
+.textefleurdroite {
+    
+ max-width: 40%;
+font-size: 5rem;
+color: #ede6dc;
+position: relative;
+top: 20rem;
+right: -20rem;
+
+       
+    
+}
+
+
+.fleurgauche {
+ 
+max-width: 30%;
+position: relative;
+left:10rem;
+  
+    
+}
+
+
+
+.textefleurgauche {
+    
+max-width: 40%;
+font-size: 5rem;
+color: #ede6dc;
+position: relative;
+top: 20rem;
+right:-20rem;
+    
+    
+}
+
+
+
+
+footer {
+    
+padding-top:5rem;
+padding-bottom:3rem;
+font-family: 'Poppins',helvetica, roboto, sans-serif;   
+color:#ede6dc;
+background-color:#df643b;
+text-align: center;
+font-size: 1rem;
+    
+}
+
+

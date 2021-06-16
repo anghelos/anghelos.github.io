@@ -1,0 +1,613 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    overflow: hidden;
+}
+
+header {
+    background-color: #121212;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+
+nav {
+    font-size: 1vmin;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    padding-right: 1.5em;
+}
+
+nav a:hover {
+    text-decoration-line: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    color: white;
+    font-size: 2em;
+    margin-left: 1em;
+    transition: all 0.1s ease-out;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    filter: brightness(100) invert(1);
+}
+
+.icon:hover {
+    animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+body {
+    background-color: #121212;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
+
+
+/* Page principale */
+#laboratoire_hsp70 {
+    background-attachment: fixed;
+    background-color: #121212;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.titre_principal {
+    font-size: 7.51vmin;
+    margin-bottom: 1em;
+    font-weight: 700;
+
+}
+
+.sous_titre {
+    align-content: center;
+    font-size: 9.1vmin;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    position: relative;
+    bottom: 1em;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 0em;
+    font-weight: 100;
+
+}
+
+.thin_arrow {
+    height: 0.45em;
+    width: 3.5em;
+}
+
+.thin_arrow:hover {
+    animation: translate 0.6s infinite linear;
+}
+
+@keyframes translate {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(15px);
+    }
+}
+
+#a_propos {
+    background-attachment: fixed;
+    background-color: #121212 background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.titre_principal_propos {
+    font-size: 5vmin;
+    margin-top: 1em;
+    margin-left: 0.9em;
+    margin-bottom: 2em;
+    font-weight: 600;
+}
+
+article {
+    margin: auto;
+    margin-top: 20vh;
+    text-align: justify;
+    width: 50em;
+    max-width: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.article_principale {
+    margin: auto;
+    margin-top: 20vh;
+    text-align: justify;
+    width: 80em;
+    max-width: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.image_team{
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    margin: 0.1em 1em 0.1em 1em;
+    position: relative;    
+    
+}
+
+/* Page principale */
+
+/* Page service */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#services_offert {
+    width: 80%;
+    margin: auto;
+
+}
+
+.service {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    color: white;
+    font-size: 1.8em;
+}
+
+.service:hover {
+    background-color: white;
+    color: #121212;
+}
+
+#services_offert h1 {
+    font-size: 3em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+
+/* Page Service */
+
+/* Page Analyses biochimiques */
+#Analyses_biochimiques {
+    background-attachment: fixed;
+    background-color: #121212;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: background 5s infinite;
+    animation-name: background;
+}
+
+@keyframes background {
+    0% {
+        color: white;
+    }
+
+    100% {
+        background-color: white;
+        color: #121212;
+    }
+}
+
+
+.titre_biochimie {
+    font-size: 9vmin;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+.bouton_fleche {
+    color: white;
+    font-size: 5em;
+}
+
+.bouton_fleche:hover {
+    color: #121212;
+    font-size: 5em;
+}
+
+#article_1 {
+    color: white;
+    font-size: 1.3em;
+    min-height: 80vh;
+    word-spacing: -2px;
+}
+
+#article_1 h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1em;
+    margin-left: 0.3em;
+}
+
+p {
+    margin: 0.5em;
+}
+
+slider {
+    background-image: url(Images_optimisees/image-analyses-biochmique-cells.jpg);
+    background-size: cover;
+    color: transparent;
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    margin: 4em 1em 0.1em 1em;
+    position: relative;
+}
+
+slider > * {
+    animation: slide 15s infinite;
+    background-color: transparent;
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+}
+
+slide:nth-child(1) {
+    animation-delay: -1s;
+    background-size: cover;
+    background-image: url(Images_optimisees/image-slider-1-analyse-biochimiques.jpg);
+    background-position: center;
+    left: 0%;
+}
+
+slide:nth-child(2) {
+    animation-delay: 2s;
+    background-size: cover;
+    background-image: url(Images_optimisees/image-slider-2-analyse-biochimiques.jpg);
+    background-position: center;
+    left: 0;
+}
+
+slide:nth-child(3) {
+    animation-delay: 5s;
+    background-size: cover;
+    background-image: url(Images_optimisees/image-slider-3-analyse-biochimique.jpg);
+    background-position: center;
+    left: 0;
+}
+
+slide:nth-child(4) {
+    animation-delay: 8s;
+    background-size: cover;
+    background-image: url(Images_optimisees/image-slider-4-analyse-biochimique.jpg);
+    background-position: center;
+    left: 0%;
+}
+
+@keyframes slide {
+    0% {
+        left: 500px;
+        width: 500px;
+    }
+
+    5% {
+        left: 0%;
+    }
+
+    25% {
+        left: 0%;
+    }
+
+    30% {
+        left: -500px;
+        width: 500px;
+    }
+
+    30.001% {
+        left: -500px;
+        width: 0%;
+    }
+
+    100% {
+        left: 500px;
+        width: 0%;
+    }
+}
+
+/* Page Analyses biochimiques */
+
+/* Page Analyses chimiques */
+
+#Analyses_chimiques {
+    background-attachment: fixed;
+    background-color: #121212;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: background 3s infinite;
+}
+
+.titre_chimie {
+    font-size: 9vmin;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+#article_2 {
+    color: white;
+    font-size: 1.3em;
+    min-height: 80vh;
+    word-spacing: 0px;
+}
+
+#article_2 h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1em;
+    margin-left: 0.3em;
+}
+
+p {
+    margin: 0.5em;
+}
+
+.slider_chimie {
+    background-image: url(Images_optimisees/Image-slider-0-analyse-chimie.jpg);
+    background-size: cover;
+    color: transparent;
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    margin: 4em 1em 0.1em 1em;
+    position: relative;
+}
+
+.slider_chimie > * {
+    animation: slide 15s infinite;
+    background-color: transparent;
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+}
+
+.slide_chimie:nth-child(1) {
+    animation-delay: -1s;
+    background-size: cover;
+    background-image: url(Images_optimisees/image-slider-1-chimie.jpg);
+    background-position: center;
+    left: 0%;
+}
+
+.slide_chimie:nth-child(2) {
+    animation-delay: 2s;
+    background-size: cover;
+    background-image: url(Images_optimisees/Image-slider-2-analyse-chimie.jpg);
+    background-position: center;
+    left: 0;
+}
+
+.slide_chimie:nth-child(3) {
+    animation-delay: 5s;
+    background-size: cover;
+    background-image: url(Images_optimisees/image-slider-3-chimie.jpg);
+    background-position: center;
+    left: 0;
+}
+
+.slide_chimie:nth-child(4) {
+    animation-delay: 8s;
+    background-size: cover;
+    background-image: url(Images_optimisees/Image-slider-4-analyse-chimie.jpg);
+    background-position: center;
+    left: 0%;
+}
+
+@keyframes slide {
+    0% {
+        left: 500px;
+        width: 500px;
+    }
+
+    5% {
+        left: 0%;
+    }
+
+    25% {
+        left: 0%;
+    }
+
+    30% {
+        left: -500px;
+        width: 500px;
+    }
+
+    30.001% {
+        left: -500px;
+        width: 0%;
+    }
+
+    100% {
+        left: 500px;
+        width: 0%;
+    }
+}
+
+/*Page Analyses chimiques*/
+
+/*Page Bioinformatique*/
+
+
+
+
+/*Page Bioinformatique*/
+
+/*Page contact*/
+
+.card-container {
+    position: relative;
+    background: #121212;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.2s ease-out;
+    overflow: hidden;
+}
+
+.mail-icon {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+}
+
+.preview-text {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 44%;
+    padding: 30px;
+    font-size: 30px;
+    color: white;
+}
+
+.card-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    background: #121212;
+    transition: 0.3s;
+}
+
+.card-container:hover {
+    background: white;
+    color: black;
+    transition: all 0.4s ease-out;
+}
+
+.card-container:hover .preview-text {
+    color: #fff;
+}
+
+.card-container:hover .mail-icon {
+    display: none;
+}
+
+.card-container:hover .card-circle {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.text-defile {
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(0, 100%);
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+    transition: 0.1s ease-out;
+    animation: float-text 10s linear infinite;
+    animation-delay: 0.2s;
+    z-index: 2;
+    opacity: 0;
+    padding: 20px 0;
+    mix-blend-mode: difference;
+}
+
+
+@keyframes float-text {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: -50%;
+    }
+
+    100% {
+        left: 000%;
+    }
+}
+
+.card-container:hover .text-defile {
+    opacity: 1;
+
+}
+
+/* Page contact */
+
+
+
+footer {
+    padding: 1em;
+    background-color: #121212;
+    text-align: center;
+    font-size: 80%;
+    font-family: 'Montserrat', sans-serif;
+    color: #d4d4d4;
+}

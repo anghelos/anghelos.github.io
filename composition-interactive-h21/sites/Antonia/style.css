@@ -1,0 +1,392 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#headerhome {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    background-image: url(images/house.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#headergallery {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    background-image: url(images/countryhouse.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 70vh;
+}
+
+#headerrestaurant {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    background-image: url(images/restaurant.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 70vh;
+
+}
+
+#headerdiscover {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    background-image: url(images/castle.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 70vh;
+}
+
+#headerreserve {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    background-image: url(images/kitchen.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 70vh;
+}
+
+header img {
+    padding-top: 5px;
+    float: inherit;
+    height: 150px;
+    width: 300px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.bouton {
+    font-family: 'Heebo', sans-serif;
+    border: 2.5px solid #FFF;
+    color: white;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-style: normal;
+}
+
+.bouton:hover {
+    color: grey;
+    background-color: white;
+}
+
+.welcometitle {
+    color: white;
+    font-style: normal;
+    font-size: 70px;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 25vh;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.homesubtitle {
+    color: white;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 30px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.getawaytitle {
+    color: grey;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 100;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Abril Fatface', cursive;
+}
+
+p {
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    font-family: 'Heebo', sans-serif;
+    padding-bottom: 8px;
+    padding-left: 40px;
+    padding-bottom: 25px;
+}
+
+
+#boxes img {
+    height: 200px;
+    width: 200px;
+}
+
+.menutitle {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 100;
+    color: grey;
+    font-size: 20px;
+    font-style: normal;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.headertitle {
+    color: white;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 20vh;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.articletitle {
+    text-align: center;
+    font-size: 32px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.activitiestitle {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 100;
+    color: grey;
+    font-size: 20px;
+    font-style: normal;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+}
+
+
+#menu p {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    padding: 3px;
+    padding-left: 30px;
+}
+
+#discover p {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    width: 85%;
+
+}
+
+
+.banner {
+    color: white;
+    padding-top: 20vh;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: 'Abril Fatface', cursive;
+}
+
+
+article {
+    max-width: 700px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.discover {
+    margin: auto;
+    text-align: center;
+}
+
+body {
+    background-color: #F4F4F4;
+    padding-bottom: 50px;
+}
+
+nav {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: lightgrey;
+    box-shadow: 0px 2px 0px 0px #dedede;
+    transition: all .5s;
+}
+
+
+#gallery img {
+    height: 448px;
+    width: 1080px;
+    padding: 30px;
+
+}
+
+#discover img {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#gallery {
+    margin: 20px;
+    display: list-item;
+    flex-direction: column;
+    align-content: center;
+}
+
+#boxes img {
+    align-content: center;
+}
+
+#about {
+    text-align: center;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+#boxes div {
+    display: inline-block;
+    padding: 25px;
+
+}
+
+.link {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 5px;
+    color: grey;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#boxes p {
+    font-size: 15px;
+    text-align: left;
+}
+
+#boxes {
+    display: flex;
+    justify-content: center;
+}
+
+.activities {
+    margin: auto;
+}
+
+article a {
+    color: grey;
+    text-decoration: underline;
+}
+
+#banner {
+    min-height: 70vh;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 100px;
+    margin: auto;
+    background-color: aqua;
+    background-image: url(images/field.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: block;
+}
+
+#banner p {
+    color: white;
+    font-size: 20px;
+}
+
+.boutonsubmit {
+    font-family: 'Heebo', sans-serif;
+    border: 2.5px solid lightgrey;
+    color: white;
+    background-color: lightgrey;
+    font-size: 14px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-style: normal;
+    margin-left: 545px;
+}
+
+.boutonsubmit:hover {
+    color: lightgrey;
+    background-color: white;
+}
+
+input {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.2rem;
+    border: 2px solid lightgrey;
+    padding: 0.3rem;
+}
+
+label {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 14px;
+}
+
+footer {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #262626;
+    color: white;
+}
+
+footer a {
+    font-size: 14px;
+    text-decoration: none;
+    color: grey;
+    margin: 15px;
+}
+
+footer a:hover {
+    color: white;
+}

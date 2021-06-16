@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    background-color: rgba(196, 255, 170, 0.45)
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    margin-left: 30px;
+}
+
+section {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 80px;
+}
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+
+nav a {
+    margin-left: 60px;
+    color: rgb(60, 129, 30);
+}
+
+nav a:hover {
+    color: #ffffff;
+    transition: all 0.6s ease-out;
+}
+
+article {
+    margin: 30px;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    text-justify: auto;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+    margin: 30px;
+}
+
+a:hover {
+    color: #ffffff;
+    transition: all 0.6s ease-out;
+}
+
+img {
+    image-orientation: horizontal;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.flexbox-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: row nowrap;
+}
+
+.flaxbox-item {
+    flex-direction: row;
+    align-items: baseline;
+    margin: 10px;
+    background-color: rgba(117, 195, 83, 0.42);
+    padding: 10px;
+}
+
+div {
+    font-size: 30px;
+    text-align: justify;
+    padding-left: 3px;
+    min-height: 30vh;
+}
+
+footer {
+    font-size: 25px;
+    text-align: center;
+}

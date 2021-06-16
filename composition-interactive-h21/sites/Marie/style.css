@@ -1,0 +1,601 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.menu a {
+    margin-left: 5vw;
+}
+
+section {
+   
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+h2 {
+    margin-bottom: 3vh;
+    margin-left: 5vh;
+    font-size: 2em;
+    text-align: left;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.bouton-blanc {
+    display: inline-block;
+    padding: 0.5em;
+    background-color: #ffffff;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-weight: bold;
+    border-radius: 0.7em;
+    font-size: 1.3em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.75);
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    left: 18vw;
+    bottom: 26vh;
+    margin: 0.5em;
+}
+
+.bouton {
+    margin-top: 10vh;
+    margin-left: 40em;
+}
+
+.bouton-blanc:hover {
+    background-color: rgb(159, 47, 33);
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
+
+}
+
+header {
+    display: flex;
+    align-items: flex-start;
+    height: 4em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(159, 47, 33);
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition: background-color 0.6s ease-out;
+    z-index: 10000;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 1em;
+    color: #ffffff;
+    padding: 1rem;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    display: inline-block;
+}
+
+#bouton_menu {
+    display: none;
+    transform: scale(1.05);
+}
+
+nav a:hover {
+    color: #000000;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 4em;
+    margin-left: 30px;
+}
+
+.logo img:hover {
+    transform: scale(1.06);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#club-des-as {
+    background-image: url("IMAGES/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.gros_titre {
+    color: #ffffff;
+    font-size: 6em;
+    margin-left: 10vw;
+    ;
+    margin-top: 50vh;
+    text-align: left;
+    text-shadow: 0 0 3vmin rgb(0 0 0 / 20%);
+}
+
+#club-des-as h2 {
+    text-align: left;
+    margin-left: 10vw;
+    font-size: 3em;
+    color: #ffffff;
+}
+
+
+#introduction {
+    min-height: 40vh;
+    background-color: #ffffff;
+    background-size: 25%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#introduction h2 {
+    margin-top: 12vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    text-align: center;
+    font-size: 2.2em;
+}
+
+#introduction p {
+    margin-top: 2vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+#nos-ligues {
+    min-height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#nos-ligues .splide__slide {
+    height: 70vh;
+}
+
+.splide__slide h2 {
+    margin-top: 20vh;
+    text-align: left;
+    margin-left: 10vw;
+    font-size: 3em;
+    color: #ffffff;
+}
+
+.splide__slide p {
+    text-align: left;
+    margin-left: 10vw;
+    margin-top: 1vh;
+    font-size: 1.4em;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.splide__track .bouton-blanc {
+    margin-right: 67vw;
+    margin-top: 3vh;
+}
+
+.splide__slide.fond1 {
+    background-image: url(IMAGES/slider1.1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.splide__slide.fond2 {
+    background-image: url(IMAGES/slider2.2.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.splide__slide.fond3 {
+    background-image: url(IMAGES/slider3.3.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.splide__slide.fond4 {
+    background-image: url(IMAGES/slider4.4.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+#decouvrez-nos-lieux-de-rencontre h2 {
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    margin-left: 11vh;
+    font-size: 2em;
+    text-align: left;
+}
+
+.row {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.splide .row {
+    justify-content: center;
+    margin: 0;
+}
+
+.column-side1 {
+    width: 48%;
+}
+
+.column-side1 img {
+    border-radius: 50px 50px;
+    margin-top: 5vh;
+}
+
+.column-side2 {
+    width: 48%;
+}
+
+.column-side2 p {
+    margin-top: 10vh;
+    margin-right: 18vh;
+    font-size: 1.4em;
+    text-align: left;
+}
+
+.column-side2 .bouton-blanc {
+    margin-right: 34vw;
+    ;
+    margin-top: 2vh;
+
+}
+
+/* À PROPOS ************/
+
+#a-propos {
+    min-height: 60vh;
+    text-align: justify;
+    margin: 80px;
+    margin-top: 200px;
+    background-image: url(SVG/a_propos.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 50%;
+}
+
+#a-propos h1 {
+    margin-bottom: 3vh;
+    margin-left: 5vh;
+    font-size: 2em;
+    text-align: left;
+}
+
+#a-propos p {
+    margin-bottom: 1em;
+}
+
+#comite-d-administration {
+    min-height: 60vh;
+    padding: 2em;
+
+}
+
+.row2 {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.membre1 {
+    background-color: #C0B2AE;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: 4em;
+    width: 30%;
+
+}
+
+.membre2 {
+    background-color: #C0B2AE;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: 4em;
+    width: 30%;
+}
+
+.membre3 {
+    background-color: #C0B2AE;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: 4em;
+    width: 30%;
+
+}
+
+.membre {
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: 4em;
+    width: 30%;
+}
+
+#comite-d-administration h2 {
+    margin-bottom: 10vh;
+}
+
+#nos-niveaux {
+    min-height: 60vh;
+}
+
+#nos-niveaux h2 {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+
+
+.ligne_des_niveaux {
+    margin-top: 10vh;
+}
+
+.row_niveau {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 14.5vw;
+    padding-right: 16vw;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+
+
+.exemple {
+    margin-left: 5em;
+}
+
+/* À PROPOS ************/
+
+/* NOS LIEUX DE RENCONTRE ************/
+
+
+#nos-lieux-de-rencontre {
+    background-image: url(IMAGES/nos-lieux-de-rencontre-header.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 75vh;
+}
+
+#nos-lieux-de-rencontre h1 {
+    text-align: center;
+    font-size: 4em;
+    color: #ffffff;
+    margin-top: 35vh;
+}
+
+#bottin-reference {
+    min-height: 10vh;
+    margin: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#bottin-reference h2 {
+    text-align: center;
+}
+
+}
+
+#nos-terrains{
+    min-height: 0px;
+}
+
+#nos-terrains h2 {
+    margin-left: 4%;
+    margin-top: 60px;
+    margin-bottom: 2em;
+}
+
+.column-side-map {
+    width: 50%;
+}
+
+.column-side-map iframe {
+    width: 100%;
+}
+
+
+.column-side p {
+    margin-right: 10vw;
+    color: black;
+    font-weight: 400;
+    font-size: 1em;
+
+}
+
+#nos-terrains .splide{
+    margin-bottom: 100px;
+}
+
+/* NOS LIEUX DE RENCONTRE ************/
+
+/* NOS LIGUES ************/
+#nos-ligues-header {
+    background-image: url(IMAGES/nos-ligues.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 75vh;
+}
+
+#nos-ligues-header h1 {
+    text-align: center;
+    font-size: 4em;
+    color: #ffffff;
+    margin-top: 35vh;
+
+}
+
+#a-propos-nos-ligues h2 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#a-propos-nos-ligues img {
+    margin-bottom: 10vh;
+    align-content: center;
+    border-radius: 0.6em;
+}
+
+/* NOS LIGUES ************/
+
+/* NOUS JOINDRE ************/
+#nous-joindre {
+    background-image: url(IMAGES/nous-rejoindre.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 75vh;
+}
+
+#nous-joindre h1 {
+    text-align: center;
+    font-size: 4em;
+    color: #ffffff;
+    margin-top: 35vh;
+}
+
+#form {
+    background-color: #ffffff;
+    min-height: 0px;
+    margin-top: 10vh;
+}
+
+form {
+    max-width: 40em;
+    margin: auto;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+input,
+textarea,
+select {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    border: 1px solid lightgrey;
+    padding: 0.4rem 1rem;
+    box-shadow: inset -1px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+input[type=radio] {
+    border: none;
+    display: inline-block;
+    width: auto;
+    margin: 1em;
+}
+
+#form p {
+    margin-bottom: 5vh;
+}
+
+input[type="saison"] {
+    display: inline;
+    width: auto;
+    margin-left: 1.6rem;
+    margin-right: 0.6rem;
+}
+
+input[type="submit"] {
+    width: 10rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: mediumpurple;
+}
+
+input[type=submit]:active {
+    background-color: violet;
+}
+
+
+/* NOUS JOINDRE ************/
+
+/* Footer ************/
+
+footer {
+    min-height: 30vh;
+    background-image: url(IMAGES/footer1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 16px;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    margin-left: 10vw;
+    margin-top: 2vh;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+
+
+}
+
+footer a:hover {
+    color: rgb(159, 47, 33);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.bouton-footer {
+    margin-top: 9.5em;
+    width: 50%;
+}
+
+
+/*********** STYLE ***********/

@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+}
+
+#logo_img {
+    width: 6rem;
+    
+    padding: 10px;
+}
+
+.hero_img {
+    width: 50%;
+    align-content: center;
+    
+}
+
+
+
+
+
+body {
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+}
+
+.content1 {
+    display: flex;
+    background-color: #C3D0B2;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 200px;
+    /* align-items: center;*/
+}
+
+.content1 > *{
+    width: 50%;
+}
+.content1 p{
+    margin:20px;
+    margin-left: 40px;
+    margin-top: 30px;
+    
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-left: 40px;
+
+}
+.content1 h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-left: 40px;
+
+}
+
+.flex_text.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+
+   
+    
+}
+.flex_text.centered a:hover{
+    transform: scale(1.05);
+    background-color: rgb(33, 54, 12);
+    color: #AEB9A0;
+   
+    
+}
+
+.flex_text.centered a{
+    text-decoration:none;
+    border-style: solid;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: black;
+    border-width: 0.02rem;
+    border-radius: 25px;
+    font-family: quicksand;
+    transition: all 0.6s ease-in-out ;
+    
+    
+}
+
+footer{
+    background-color: #AEB9A0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+.coordonnees {
+    display: flex;
+
+}
+#sociaux a{
+    display: block;
+
+}
+
+ins {
+    text-decoration: none;
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h5{
+    font-size: 1rem;
+    
+}
+
+.navigation:hover{
+    color:rgb(33, 54, 12);
+    text-decoration: underline;
+
+}
+
+.coordonnees p{
+    font-size: 1rem;
+    margin-right: 50px;
+    
+}
+
+a{
+padding: 5px;
+font-size: 0.9rem;
+}
+#email2 {
+    justify-items: normal;
+}
+
+#email {
+    background-color: rgba(128, 128, 128, 0);
+    border-style: solid;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    letter-spacing: .02rem;
+    line-height: normal;
+    font-weight: 500;
+}
+
+#hero2img {
+    width: 50%;
+    margin-top: 0;
+}
+
+#img_ile {
+    width: 50%;
+}
+
+.pg_histoire2 {
+    display: inline-block;
+    background-color: #F7FFED;
+}
+
+#lorem2 {
+    text-align: left;
+    margin-left: auto;
+    display: inline-block;
+}
+
+
+
+    
+
+
+
+
+
+
+.repondant {
+    margin: 50px;
+    width: 100%;
+  
+    
+}
+
+.repondant p{
+    margin-left: 50px;
+   
+   
+}
+
+.content_repondant{
+    display: flex;
+}
+.content_repondant img{
+    width: 50%;
+}
+
+
+
+body {
+    background-color: #C3D0B2;
+}
+
+
+
+header {
+    background-color:  #C3D0B2;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navigation {
+    font-family: Arial, Helvetica, sans-serif;
+    
+    padding: 10px;
+    margin: 15px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+#panier {
+    font-weight: bold;
+    border-style: solid;
+    border-width: .1rem;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+text-decoration: none;
+
+
+
+}
+
+.content_repondant{
+    display: flex;
+}
+
+#panier:hover{
+    color: #C3D0B2;
+    background-color:rgb(33, 54, 12);
+
+  
+}
+
+h1 {
+    padding-top: 100px;
+    padding-right: 40px;
+}
+
+p {
+    
+    font-family: quicksand;
+}
+
+#font-pot {
+    background-image: url(imagesopt/finale.png);
+    background-size: cover;
+    min-height: 20vh;
+    min-width: 100vh;
+}
+
+#para1 {
+    margin-right: 50%;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-family: quicksand;
+}
+
+.img-pot {
+    width: 50vh;
+    margin-left: 400px;
+    margin-top: -50px;
+}
+
+
+#font-produit {
+    background-image: url(imagesopt/fianle5.png);
+    background-size: cover;
+    min-height: 20vh;
+    min-width: 100vh;
+    background-position: left;
+}
+
+.produits {
+    display: flex;
+    padding: 90px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.produit{
+    width: 350px;
+    margin-bottom: 50px;
+    
+    overflow: hidden;
+
+}
+.produit img{
+    
+    transition: all 0.7s ease-out;
+    z-index: 9;
+   width: 100%;
+    
+}
+.produit:hover img{
+    transform: scale(1.05);
+    
+
+}
+
+.produit h3{
+    position: relative;
+    z-index: 10;
+    background-color:rgb(86, 110, 83);
+    margin: 0;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: justify;
+    cursor: pointer;
+
+}
+
+.produit h3:hover{
+    text-decoration: underline;
+}
+
+#sociaux a{
+    font-size: 1rem;
+    cursor: pointer;
+    
+}
+
+#sociaux a:hover{
+    color: rgb(86, 110, 83);
+    text-decoration: underline;
+}
+
